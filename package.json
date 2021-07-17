@@ -1,0 +1,20 @@
+{
+  "name": "oc-project6-fisheye",
+  "version": "1.0.0",
+  "description": "Project6 - FishEye",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./public/sass/style.scss:./public/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthoBastianaggi/AnthonyBastianaggi_6_17072021.git"
+  },
+  "author": "Anthony Bastianaggi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthoBastianaggi/AnthonyBastianaggi_6_17072021/issues"
+  },
+  "homepage": "https://github.com/anthoBastianaggi/AnthonyBastianaggi_6_17072021#readme"
+}
