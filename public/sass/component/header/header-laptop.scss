@@ -1,0 +1,17 @@
+@include breakpoint(laptop) {
+    header {
+        .container {
+            .row {
+                .center {
+                    @include maxsize(100%, 100%);
+                    @include absolute-position(120px, 0);
+                    .navbar {
+                        .navbar-center {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

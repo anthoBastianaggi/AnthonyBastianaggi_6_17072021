@@ -1,0 +1,28 @@
+@include breakpoint(mobile) {
+    header {
+        .container {
+            margin: 43px 20px;
+            .row {
+                .left a img {
+                    @include size(150px, 100%);
+                }
+                .center {
+                    @include maxsize(100%, 100%);
+                    @include absolute-position(110px, 0);
+                    .navbar {
+                        .navbar-center {
+                            flex-wrap: wrap;
+                            margin: 0 20px;
+                        }
+                    }
+                }
+                .right {
+                    .title {
+                        @include size(120px, 100%);
+                        @include font(14px, 18px);
+                    }
+                }
+            }
+        }
+    }
+}
