@@ -1,0 +1,6 @@
+.header {
+    margin: 43px 100px;
+    .link-image img {
+        @include size(200px, 100%);
+    }
+}

@@ -161,6 +161,28 @@ header .container .row .right .title {
     line-height: 18px;
   }
 }
+.header {
+  margin: 43px 100px;
+}
+.header .link-image img {
+  height: 100%;
+  width: 200px;
+}
+
+@media (min-width: 641px) and (max-width: 1080px) {
+  .header {
+    margin: 43px 50px;
+  }
+}
+@media (max-width: 640px) {
+  .header {
+    margin: 43px 20px;
+  }
+  .header .link-image img {
+    height: 100%;
+    width: 150px;
+  }
+}
 .card {
   display: flex;
   flex-direction: row;
