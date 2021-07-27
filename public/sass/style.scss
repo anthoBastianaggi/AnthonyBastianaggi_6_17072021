@@ -7,6 +7,41 @@
 @import './component/header/header-tablet.scss';
 @import './component/header/header-mobile.scss';
 
+@import './sections/photographers/photographers.scss';
+@import './sections/photographers/photographers-mobile.scss';
+
 body {
     margin: 0;
+}
+main {
+    position: relative;
+    top: 60px;
+    margin: 0 68px;
+    @include breakpoint(laptop) {
+        top: 117px;
+    }
+    @include breakpoint(tablet) {
+        top: 117px;
+        margin: 0 18px;
+    }
+    @include breakpoint(mobile) {
+        top: 85px;
+        margin: 0 20px;
+    }
+    @media (max-width: 344px) {
+        top: 117px;
+    }
+}
+.section {
+    display: grid;
+    justify-content: space-between;
+    padding: 0;
+    grid-template-columns: auto auto auto;
+    @media (max-width: 900px) {
+        grid-template-columns: auto auto;
+    }
+    @include breakpoint(mobile) {
+        justify-content: center;
+        grid-template-columns: auto;
+    }
 }
