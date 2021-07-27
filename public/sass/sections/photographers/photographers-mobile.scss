@@ -1,0 +1,6 @@
+@include breakpoint(mobile) {
+    .card {
+        @include size(100%, auto);
+        margin-bottom: 29px;
+    }
+}
