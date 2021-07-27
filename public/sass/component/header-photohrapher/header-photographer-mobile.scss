@@ -1,0 +1,8 @@
+@include breakpoint(mobile) {
+    .header {
+        margin: 43px 20px;
+        .link-image img {
+            @include size(150px, 100%);
+        }
+    }
+}
