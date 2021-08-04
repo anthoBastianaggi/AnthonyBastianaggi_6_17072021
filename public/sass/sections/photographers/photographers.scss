@@ -10,19 +10,26 @@
             text-align: center;
             .card-header-link {
                 text-decoration: none;
-                .image {
-                    @include size(200px, 200px);
-                    border-radius: 50%;
-                    box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
-                    object-fit: cover;
-                    overflow: hidden;
-                }
-                .title {
-                    @include font(36px, 46.87px, 400);
-                    color: var(--secondary);
-                    margin: 20px 0 0 0;
-                    text-align: center;
-                }
+                figure {
+                   margin: 0;
+                    picture {
+                        .image {
+                            @include size(200px, 200px);
+                            border-radius: 50%;
+                            box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
+                            object-fit: cover;
+                            overflow: hidden;
+                        }
+                    }
+                    figcaption {
+                        .title {
+                            @include font(36px, 46.87px, 400);
+                            color: var(--secondary);
+                            margin: 20px 0 0 0;
+                            text-align: center;
+                        }
+                    }
+                }   
             }
         }
         .card-content {

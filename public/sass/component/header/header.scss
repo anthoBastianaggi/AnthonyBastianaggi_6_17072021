@@ -15,9 +15,12 @@ header {
                 flex-grow: 0;
                 @include maxsize(100%, 100%);
             }
-            .left a img {
-                @include size(200px, 100%);
-            }
+            .left a figure {
+                margin: 0;
+                img {
+                    @include size(200px, 100%);
+                }
+            } 
             .center {
                 flex: 0 0 50%;
                 @include maxsize(100%, 50%);

@@ -1,0 +1,21 @@
+@include breakpoint(tablet) {
+    .section-banner {
+        .banner-info {
+            background: var(--transparent);
+            margin: 0;
+            .container {
+                padding: 54px 32px 54px 32px;
+                .row {
+                    .column-left {
+                        .banner-header {
+                            margin-right: 30px;
+                        }
+                        .banner-content {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

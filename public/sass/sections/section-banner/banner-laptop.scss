@@ -1,0 +1,41 @@
+@include breakpoint(laptop) {
+    .section-banner {
+        .banner-info {
+            .container {
+                .row {
+                    .column-left {
+                        @include maxsize(auto, 760px);
+                        @media (max-width: 1270px) {
+                            @include align(initial);
+                        }
+                        
+                        .banner-header {
+                            margin-right: 50px;
+                        }
+                        #photographer-1 {
+                            @media (max-width: 1270px) {
+                                @include size(auto, auto);
+                            }
+                        }
+                        #photographer-2, #photographer-6  {
+                            @media (max-width: 1270px) {
+                                @include size(51%, auto);
+                            }
+                        }
+                        #photographer-3 {
+                            @media (max-width: 1270px) {
+                                @include size(40%, auto);
+                            }
+                        }
+                        #photographer-4, #photographer-5{
+                            @media (max-width: 1270px) {
+                                @include size(45%, auto);
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }   
+}
