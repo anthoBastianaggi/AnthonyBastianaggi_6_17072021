@@ -3,7 +3,7 @@
         .container {
             margin: 43px 20px;
             .row {
-                .left a img {
+                .left a figure img {
                     @include size(150px, 100%);
                 }
                 .center {

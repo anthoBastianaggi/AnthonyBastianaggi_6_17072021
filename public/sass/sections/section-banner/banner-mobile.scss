@@ -1,0 +1,57 @@
+@include breakpoint(mobile) {
+    .section-banner {
+        .banner-info {
+            background: var(--transparent);
+            margin: 0;
+            .container {
+                padding: 0px 0px 54px 0px;
+                .row {
+                    .column-left {
+                        .banner-header {
+                            margin-right: 15px;
+                            .title {
+                                @include font(36px, 46.87px, 400);
+                            }
+                            .subtitle {
+                                @include font(13px, 16.93px, 400);
+                                margin-bottom: 5px;
+                            }
+                            .description {
+                                @include font(13px, 16.93px, 400);
+                            }
+                            .tags {
+                                .tags-list {
+                                    @include absolute-position();
+                                    margin: 8px 0 0 0;
+                                    .list-items {
+                                        .link-item {
+                                            @include font(13px, 16.93px, 500);
+                                        }
+                                    }
+                                }
+                            }  
+                            .tags-mimi {
+                                .tags-list {
+                                    @media (min-width: 332px) {
+                                        @include relative-position();
+                                        flex-wrap: wrap;
+                                    }  
+                                }
+                            }
+                        } 
+                        .banner-content {
+                            display: none;
+                        }
+                    }
+                    .column-right {
+                        figure {
+                            .image {
+                                @include size(100px, 100px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
