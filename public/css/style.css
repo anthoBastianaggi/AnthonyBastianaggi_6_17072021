@@ -9,6 +9,9 @@
   --tertiary: #525252;
   --dark-gray: #757575;
   --gray-98: #fafafa;
+  --burning-sand: #DB8876;
+  --mine-shaft: #312E2E;
+  --falu-red: #801717;
 }
 
 header .container {
@@ -546,6 +549,212 @@ header .container .row .right .title {
   .section-banner .banner-info .container .row .column-right figure .image {
     height: 100px;
     width: 100px;
+  }
+}
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: inherit;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: inherit;
+  bottom: inherit;
+  left: 0;
+  z-index: 20;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.section-contact .modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: inherit;
+  bottom: inherit;
+  left: inherit;
+  background: rgba(196, 196, 196, 0.4);
+  overflow: auto;
+}
+.section-contact .modal .modal-container {
+  height: auto;
+  width: 100%;
+  max-height: inherit;
+  max-width: 670px;
+  position: relative;
+  top: inherit;
+  right: inherit;
+  bottom: inherit;
+  left: inherit;
+  background: var(--burning-sand);
+  margin: 6% auto;
+  border-radius: 5px;
+  animation: open-modal 1.5s ease-in-out normal forwards;
+}
+.section-contact .modal .modal-container .modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: inherit;
+  align-content: inherit;
+  padding: 12px 35px 10px 35px;
+}
+.section-contact .modal .modal-container .modal-header .modal-title {
+  height: auto;
+  width: 90%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 83.33px;
+  margin: 0;
+}
+.section-contact .modal .modal-container .modal-header .modal-close {
+  height: 47px;
+  width: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: inherit;
+  position: absolute;
+  top: 29px;
+  right: 35px;
+  bottom: inherit;
+  left: inherit;
+  font-size: 90px;
+  cursor: pointer;
+  color: var(--white);
+}
+.section-contact .modal .modal-container .modal-header .modal-close:hover {
+  transform: scale(1.05);
+}
+.section-contact .modal .modal-container .modal-form {
+  padding: 0 35px 38px;
+}
+.section-contact .modal .modal-container .modal-form .modal-form-group {
+  position: relative;
+  top: inherit;
+  right: inherit;
+  bottom: inherit;
+  left: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.section-contact .modal .modal-container .modal-form .modal-form-group .form-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 46.87px;
+  color: var(--mine-shaft);
+}
+.section-contact .modal .modal-container .modal-form .modal-form-group .form-input {
+  height: 62px;
+  width: auto;
+}
+.section-contact .modal .modal-container .modal-form .modal-form-group #message {
+  height: 162px;
+  width: auto;
+}
+.section-contact .modal .modal-container .modal-form .form-group-textarea {
+  margin: 15px 0 26px 0;
+}
+.section-contact .modal .modal-container .modal-form .btn-submit {
+  height: 69px;
+  width: 170px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 23.44px;
+  background: var(--primary);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+}
+.section-contact .modal .modal-container .modal-form .btn-submit:hover {
+  background: var(--falu-red);
+}
+
+@keyframes open-modal {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 1080px) and (max-width: 670px) {
+  .section-contact .modal .modal-container {
+    position: fixed;
+    top: inherit;
+    right: inherit;
+    bottom: 0;
+    left: inherit;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    overflow: auto;
+  }
+}
+@media (max-width: 640px) {
+  .section-contact .modal .modal-container .modal-header {
+    padding: 17px 22px 30px 15px;
+  }
+  .section-contact .modal .modal-container .modal-header .modal-title {
+    font-family: "DM Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 46.87px;
+  }
+  .section-contact .modal .modal-container .modal-header .modal-close {
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    top: 22px;
+    right: 27px;
+    bottom: inherit;
+    left: inherit;
+    font-size: 40px;
+  }
+  .section-contact .modal .modal-container .modal-form {
+    padding: 0 22px 38px 15px;
+  }
+  .section-contact .modal .modal-container .modal-form .modal-form-group {
+    margin-top: 3px;
+  }
+  .section-contact .modal .modal-container .modal-form .modal-form-group .form-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 31.25px;
+  }
+  .section-contact .modal .modal-container .modal-form .modal-form-group .form-input {
+    height: 46px;
+    width: auto;
+  }
+  .section-contact .modal .modal-container .modal-form .modal-form-group #message {
+    height: 176px;
+    width: auto;
+  }
+  .section-contact .modal .modal-container .modal-form .form-group-textarea {
+    margin: 12px 0 26px 0;
+  }
+  .section-contact .modal .modal-container .modal-form .btn-submit {
+    height: 35px;
+    width: 170px;
+    margin: 0 auto;
+    display: block;
   }
 }
 body {
