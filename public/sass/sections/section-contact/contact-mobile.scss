@@ -1,0 +1,44 @@
+@include breakpoint(mobile) {
+    .section-contact {
+        .modal {
+            .modal-container {
+                .modal-header {
+                    padding: 17px 22px 30px 15px;
+                    .modal-title{
+                        @include font(36px, 46.87px);
+                    }
+                    .modal-close{
+                        @include size(19px, 19px);
+                        @include absolute-position(22px, 27px);
+                        font-size: 40px;
+                    }
+                }
+                .modal-form {
+                    padding: 0 22px 38px 15px;
+                    .modal-form-group {
+                        margin-top: 3px;
+                        .form-label {
+                            @include font(24px, 31.25px);
+                        }
+    
+                        .form-input {
+                            @include size(auto, 46px);
+                        }
+    
+                        #message {
+                            @include size(auto, 176px);
+                        }
+                    }
+                    .form-group-textarea {
+                        margin: 12px 0 26px 0;
+                    }
+                    .btn-submit {
+                        @include size(170px, 35px);
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

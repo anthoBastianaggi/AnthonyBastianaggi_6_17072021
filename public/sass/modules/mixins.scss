@@ -33,6 +33,14 @@
     left: $left;
 }
 
+@mixin fixed-position($top: inherit, $right: inherit, $bottom: inherit, $left: inherit) { 
+    position: fixed; 
+    top: $top; 
+    right: $right; 
+    bottom: $bottom; 
+    left: $left;
+}
+
 @mixin size($width: 100%, $height: 100%) { 
     height: $height; 
     width: $width;
@@ -42,6 +50,12 @@
     max-height: $height; 
     max-width: $width;
 } 
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
 
 @mixin breakpoint($point) { 
     @if $point == mobile { 

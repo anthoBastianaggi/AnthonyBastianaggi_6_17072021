@@ -63,6 +63,42 @@
                     </div>
                 </div>
             </section>
+
+            <section class="section-contact">
+                <div class="modal" role="dialog" aria-labelledby="contact-title">
+                    <div class="modal-container">
+                        <header class="modal-header">
+                            <h1 class="modal-title" id="contact-title">Contactez-moi <br>Nabeel Bradford</h1>
+                            <span class="modal-close">&times;</span>
+                        </header>
+                        <div class="modal-form">
+                            <form name="contactForm" action="nabeel-bradford.html" method="get" id="contactForm">
+                                <div class="modal-form-group">
+                                    <label for="firstname" class="form-label" id="label-firstname">Prénom</label>
+                                    <input type="text" name="firstname" id="firstname" class="form-input" aria-labelledby="label-firstname" minlength="2" maxlength="64" required />
+                                    <span id="first-error"></span>
+                                </div>
+                                <div class="modal-form-group">
+                                    <label for="lastname" class="form-label" id="label-lastname">Nom</label>
+                                    <input type="text" name="lastname" id="lastname" class="form-input" aria-labelledby="label-lastname" minlength="2" maxlength="64" required />
+                                    <span id="last-error"></span>
+                                </div>
+                                <div class="modal-form-group">
+                                    <label for="email" class="form-label" id="label-email">Email</label>
+                                    <input type="email" name="email" id="email" class="form-input" aria-labelledby="label-email" required />
+                                    <span id="email-error"></span>
+                                </div>
+                                <div class="modal-form-group form-group-textarea">
+                                    <label for="message" class="form-label" id="label-message">Votre message</label>
+                                    <textarea name="message" id="message" class="form-input" aria-labelledby="label-message" required></textarea>
+                                    <span id="message-error"></span>
+                                </div>
+                                <button class="btn-submit" type="submit">Envoyer</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>

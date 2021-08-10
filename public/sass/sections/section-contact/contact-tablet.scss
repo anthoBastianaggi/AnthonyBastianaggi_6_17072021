@@ -1,0 +1,15 @@
+@include breakpoint(tactil) {
+    .section-contact {
+        .modal {
+            .modal-container {
+                @media (max-width: 670px) {
+                    @include fixed-position(inherit, inherit, 0);
+                    @include size();
+                    margin: 0;
+                    border-radius: 0;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+}
