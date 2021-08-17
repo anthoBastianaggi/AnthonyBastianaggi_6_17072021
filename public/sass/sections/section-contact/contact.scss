@@ -1,4 +1,5 @@
 .section-contact {
+    display: none !important;
     @include flex(column);
     @include align(center, center);
     @include size();
