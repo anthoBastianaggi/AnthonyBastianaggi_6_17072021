@@ -1,0 +1,71 @@
+.section-gallery-images {
+    .filter {
+        margin: 9px 32px 5px 32px;
+        .text-filter {
+            @include font(18px, 23.44px, 700);
+            color: var(--black);
+        }
+        .select {
+            @include size(170px, 69px);
+            @include font(18px, 23.44px, 700);
+            border-radius: 5px;
+            background-color: var(--primary);
+            border: none;
+            padding: 23px 20px;
+            color: var(--white);
+            margin-left: 25px;
+        }
+    }
+    
+    .gallery-container {
+        @include align(space-between);
+        margin: 0 32px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        .gallery-card {
+            @include size(350px, auto);
+            margin-top: 25px;
+            .card-figure {
+                margin: 0;
+                picture .card-image, .card-video {
+                    @include size(350px, 300px);
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+
+                .card-video {
+                    cursor: pointer;
+                }
+
+                figcaption {
+                    @include size(350px, auto);
+                    @include flex();
+                    @include align(space-between, baseline);
+                    .card-title {
+                        @include font(24px, 31.25px, 400);
+                        color: var(--primary);
+                        margin: 0px;
+                        margin-top: 10px;
+                    }
+                    .card-likes {
+                        @include flex();
+                        @include align(inherit, center);
+                        .likes {
+                            @include font(24px, 31.25px, 500);
+                            color: var(--primary);
+                        }
+                        .icon-heart {
+                            color: var(--primary);
+                            background-color: var(--primary);
+                            font-size: 21px;
+                            -webkit-background-clip: text;
+                            font-weight: 900;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
