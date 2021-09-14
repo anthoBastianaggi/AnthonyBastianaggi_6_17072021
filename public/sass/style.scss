@@ -9,6 +9,8 @@
 @import './component/header-photohrapher/header-photographer.scss';
 @import './component/header-photohrapher/header-photographer-tablet.scss';
 @import './component/header-photohrapher/header-photographer-mobile.scss';
+@import './component/footer/footer.scss';
+@import './component/footer/footer-tablet.scss';
 
 @import './sections/photographers/photographers.scss';
 @import './sections/photographers/photographers-mobile.scss';
@@ -26,6 +28,11 @@
 @import './sections/section-gallery-images/gallery-laptop.scss';
 @import './sections/section-gallery-images/gallery-tablet.scss';
 @import './sections/section-gallery-images/gallery-mobile.scss';
+
+@import './sections/section-modal-images/modal.scss';
+@import './sections/section-modal-images/modal-laptop.scss';
+@import './sections/section-modal-images/modal-tablet.scss';
+@import './sections/section-modal-images/modal-mobile.scss';
 
 body {
     margin: 0;
@@ -51,12 +58,12 @@ body {
 }
 .main-photographer {
     position: relative;
-    margin: 0 68px;
+    margin: 0 68px 68px 68px;
     @include breakpoint(tablet) {
-        margin: 0 18px;
+        margin: 0 18px 68px 18px;
     }
     @include breakpoint(mobile) {
-        margin: 0 20px;
+        margin: 0 20px 40px 20px;
     }
 }
 .section {

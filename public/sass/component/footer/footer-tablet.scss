@@ -1,0 +1,7 @@
+@include breakpoint(tactil) {
+    .footer {
+        @media (max-width: 830px) {
+            display: none;
+        }
+    }
+}
