@@ -1,0 +1,57 @@
+@include breakpoint(mobile) {
+    .section-modal-image {
+        .slider {
+            @include size(640px, 100%); 
+            @include flex();
+            &__close {
+                @media (max-width: 360px) {
+                    @include absolute-position(287px, 160px);
+                    padding: 0px 7px 0 7px;
+                }
+                @include absolute-position(277px, 141px);
+                padding: 0px 9px 0 9px;
+                font-size: 30px;
+            } 
+            &__list__item {
+                @media (max-width: 360px) {
+                    @include size(257px, 245px);
+                }
+                @include size(289px, 275px);
+                margin: auto;
+            }
+            &__prev {
+                @media (max-width: 360px) {
+                    @include absolute-position(110px, inherit, inherit, -33px);
+                }
+                @include absolute-position(124px, inherit, inherit, -33px);
+                padding: 0 10px;
+                font-size: 21px;
+            }         
+            &__next {
+                @media (max-width: 360px) {
+                    @include absolute-position(110px, -33px);
+                }
+                @include absolute-position(124px, -33px);
+                padding: 0 10px;
+                font-size: 21px;
+            }
+            &__image {
+                @media (max-width: 360px) {
+                    @include size(100%, 221px);
+                }
+                @include size(100%, 248px);
+            }
+            &__video {
+                @media (max-width: 360px) {
+                    @include size(100%, 221px);
+                }
+                @include size(100%, 248px);
+            }
+            &__title {
+                @include font(16px, 18.23px);
+                margin: 0;
+                margin-top: 3px;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@include breakpoint(laptop) {
+    .section-modal-image {
+        .slider {
+            @include size(860px, 100%);  
+            @include flex();
+            &__close {
+                @include absolute-position(105px, 13px);
+                padding-top: 0;
+            }
+            &__list__item {
+                @include size(655px, 605px);
+                margin: auto;
+            }
+            &__prev {
+                @include absolute-position(280.5px, inherit, inherit, -83px);
+            }         
+            &__next {
+                @include absolute-position(280.5px, -83px);
+            }
+            &__image {
+                @include size(100%, 561px);
+            }
+            &__video {
+                @include size(100%, 561px);
+            }
+        }
+    }
+}

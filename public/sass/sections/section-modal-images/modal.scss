@@ -1,145 +1,92 @@
 .section-modal-image {
+    display: none !important;
     @include flex(column);
     @include align(center, center);
     @include size();
     @include fixed-position(0, inherit, inherit, 0);
     z-index: 20;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-
     background: rgba(196, 196, 196, 0.4);
-    .carousel {
-        @include size(1255px);
-        @include fixed-position(0, inherit, inherit, initial);
+    .slider {
+        @include size(1255px, 100%);
+        @include fixed-position(inherit, inherit, inherit, initial);
         overflow: auto;
-        background: white;
-
-        .slider-close {
-            right: 20px;
-            text-align: right;
-            position: absolute;
+        background: var(--white);
+        &__close {
+            @include absolute-position(inherit, 20px, inherit, initial);
             padding: 17px 20px 0 20px;
             cursor: pointer;
             font-size: 77px;
-            height: 42px;
-            width: 42px;
-            color: #911C1C;
-        }
-        
-        ul.slides {
-            display: block;
-            position: relative;
-            height: 900px;
+            color: var(--primary);
+        }      
+        &__list__item {
+            @include relative-position();
+            @include size(1050px, 100%);
             margin: 22px auto 0 auto;
             padding: 0;
             list-style: none;
-            width: 1050px;
-    
-            .slide-input {
-                display: none; 
-                &:checked + .slide-container .slide-article {
-                    opacity: 1;
-                    transform: scale(1);
-                    transition: opacity 1s ease-in-out;
-                }
-    
-                &:checked + .slide-container .carousel-controls label {
-                    display: block; 
-                }
-            }
-    
-            .slide-container { 
-                display: block; 
-                .slide-article {
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    opacity: 0;
-                    transition: all .7s ease-in-out;
-                    &:hover + .carousel-controls label {
-                        opacity: 0.5;
-                    }
-                    
-                    .slide-image {
-                        margin: 0;
-                        .image {
-                            width: 1050px;
-                            min-width: 100%;
-                            height: 900px;
-                            object-fit: cover;
-                            border-radius: 5px;
-                        }
-
-                        .slide-title {
-                            font-family: DM Sans;
-                            font-style: normal;
-                            font-weight: normal;
-                            font-size: 24px;
-                            line-height: 31px;
-                            color: #911C1C;
-                        }
-                    }  
-                    
-                    .slide-video {
-                        margin: 0;
-                        .video {
-                            width: 1050px;
-                            min-width: 100%;
-                            height: 900px;
-                            object-fit: cover;
-                            border-radius: 5px;
-                        }
-
-                        .slide-title {
-                            font-family: DM Sans;
-                            font-style: normal;
-                            font-weight: normal;
-                            font-size: 24px;
-                            line-height: 31px;
-                            color: #911C1C;
-                        }
-                    }  
-                }
-    
-                .carousel-controls {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    z-index: 999;
-                    font-size: 100px;
-                    line-height: 900px;
-                    color: #911C1C;
-    
-                    .prev-slide {
-                        width: 49%;
-                        text-align: left;
-                        left: -83px;
-                        display: none;
-                        position: absolute;
-                        padding: 0 20px;
+        }
+        &__input {
+            display: none; 
+            &:checked + {
+               .slider__item__container {
+                   .slider__article {
                         opacity: 1;
-                        cursor: pointer;
-                        font-size: 48px;
+                        transform: scale(1);
+                        transition: opacity 1s ease-in-out;
+                   } 
+                   .slider__controls label {
+                        display: block;
                     }
-                    
-                    .next-slide {
-                        width: 49%;
-                        text-align: right;
-                        right: -83px;
-                        display: none;
-                        position: absolute;
-                        padding: 0 20px;
-                        opacity: 1;
-                        cursor: pointer;
-                        font-size: 48px;
-                    }
-                }
+               }     
             }
+        }
+        &__item {    
+            &--video {
+                @include relative-position();
+                z-index: 1;
+            }   
+        }
+        &__article {
+            @include absolute-position();
+            @include size();
+            opacity: 0;
+            transition: all .7s ease-in-out;
+        }
+        &__figure {
+            margin: 0;
+        }  
+        &__image {
+            @include size(100%, 900px);
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        &__video {
+            @include size(100%, 900px);
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        &__title {
+            @include font(24px, 31px);
+            color: var(--primary);
+            margin: 12px 0 20px 0;
+        }
+        &__controls {
+            color: var(--primary);
+        }
+        &__prev {
+            @include absolute-position(450px, inherit, inherit, -83px);
+            display: none;
+            padding: 0 20px;
+            cursor: pointer;
+            font-size: 48px;
+        }    
+        &__next {
+            @include absolute-position(450px, -83px);
+            display: none;
+            padding: 0 20px;
+            cursor: pointer;
+            font-size: 48px;
         }
     }
 }
-
