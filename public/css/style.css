@@ -14,10 +14,10 @@
   --falu-red: #801717;
 }
 
-header .container {
+.header__container {
   margin: 43px 100px;
 }
-header .container .row {
+.header__row {
   height: 100%;
   width: 100%;
   display: flex;
@@ -27,7 +27,7 @@ header .container .row {
   align-content: inherit;
   flex-wrap: wrap;
 }
-header .container .row .column {
+.header__column {
   height: 100%;
   width: 100%;
   position: relative;
@@ -36,25 +36,28 @@ header .container .row .column {
   bottom: inherit;
   left: inherit;
 }
-header .container .row .left, header .container .row .right {
+.header__column--left, .header__column--right {
   flex-basis: 0;
   flex-grow: 0;
   max-height: 100%;
   max-width: 100%;
 }
-header .container .row .left a figure {
+.header__column--left a figure {
   margin: 0;
 }
-header .container .row .left a figure img {
+.header__column--left a figure img {
   height: 100%;
   width: 200px;
 }
-header .container .row .center {
+.header__column--center {
   flex: 0 0 50%;
   max-height: 50%;
   max-width: 100%;
 }
-header .container .row .center .navbar .navbar-center {
+.header__column--right {
+  text-align: end;
+}
+.header__navbar__center {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -62,19 +65,19 @@ header .container .row .center .navbar .navbar-center {
   align-content: inherit;
   padding: 0;
 }
-header .container .row .center .navbar .navbar-center .list-items {
+.header__list__items {
   height: 22px;
   width: auto;
   list-style: none;
   margin: 5px;
 }
-header .container .row .center .navbar .navbar-center .list-items:first-child {
+.header__list__items:first-child {
   margin-left: 0;
 }
-header .container .row .center .navbar .navbar-center .list-items:last-child {
+.header__list__items:last-child {
   margin-right: 0;
 }
-header .container .row .center .navbar .navbar-center .list-items .link-item {
+.header__link__item {
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -87,14 +90,11 @@ header .container .row .center .navbar .navbar-center .list-items .link-item {
   text-decoration: none;
   transition: all 0.2s;
 }
-header .container .row .center .navbar .navbar-center .list-items .link-item:hover {
+.header__link__item:hover {
   background-color: var(--primary);
   color: var(--white);
 }
-header .container .row .right {
-  text-align: end;
-}
-header .container .row .right .title {
+.header__title {
   font-family: "DM Sans", sans-serif;
   font-size: 36px;
   font-weight: normal;
@@ -107,7 +107,7 @@ header .container .row .right .title {
 }
 
 @media (min-width: 1081px) and (max-width: 1438px) {
-  header .container .row .center {
+  .header__column--center {
     max-height: 100%;
     max-width: 100%;
     position: absolute;
@@ -116,15 +116,15 @@ header .container .row .right .title {
     bottom: inherit;
     left: inherit;
   }
-  header .container .row .center .navbar .navbar-center {
+  .header__navbar__center {
     margin: 0;
   }
 }
 @media (min-width: 641px) and (max-width: 1080px) {
-  header .container {
+  .header__container {
     margin: 43px 50px;
   }
-  header .container .row .center {
+  .header__column--center {
     max-height: 100%;
     max-width: 100%;
     position: absolute;
@@ -133,19 +133,19 @@ header .container .row .right .title {
     bottom: inherit;
     left: inherit;
   }
-  header .container .row .center .navbar .navbar-center {
+  .header__navbar__center {
     margin: 0;
   }
 }
 @media (max-width: 640px) {
-  header .container {
+  .header__container {
     margin: 43px 20px;
   }
-  header .container .row .left a figure img {
+  .header__column--left a figure img {
     height: 100%;
     width: 150px;
   }
-  header .container .row .center {
+  .header__column--center {
     max-height: 100%;
     max-width: 100%;
     position: absolute;
@@ -154,11 +154,11 @@ header .container .row .right .title {
     bottom: inherit;
     left: inherit;
   }
-  header .container .row .center .navbar .navbar-center {
+  .header__navbar__center {
     flex-wrap: wrap;
     margin: 0 20px;
   }
-  header .container .row .right .title {
+  .header__title {
     height: 100%;
     width: 120px;
     font-family: "DM Sans", sans-serif;
@@ -168,27 +168,27 @@ header .container .row .right .title {
     line-height: 18px;
   }
 }
-.header {
+.header-photographer {
   margin: 43px 100px 40px 100px;
 }
-.header .link-image figure {
+.header-photographer .link-image figure {
   margin: 0;
 }
-.header .link-image figure img {
+.header-photographer .link-image figure img {
   height: 100%;
   width: 200px;
 }
 
 @media (min-width: 641px) and (max-width: 1080px) {
-  .header {
+  .header-photographer {
     margin: 43px 50px 40px 50px;
   }
 }
 @media (max-width: 640px) {
-  .header {
+  .header-photographer {
     margin: 43px 20px 30px 20px;
   }
-  .header .link-image figure img {
+  .header-photographer .link-image figure img {
     height: 100%;
     width: 150px;
   }
@@ -243,23 +243,23 @@ header .container .row .right .title {
   min-width: 263px;
   margin-bottom: 51px;
 }
-.card .card-container {
+.card__container {
   display: flex;
   flex-direction: column;
   justify-content: inherit;
   align-items: center;
   align-content: inherit;
 }
-.card .card-container .card-header {
+.card__header {
   text-align: center;
 }
-.card .card-container .card-header .card-header-link {
+.card__header__link {
   text-decoration: none;
 }
-.card .card-container .card-header .card-header-link figure {
+.card__figure {
   margin: 0;
 }
-.card .card-container .card-header .card-header-link figure picture .image {
+.card__image {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -267,7 +267,7 @@ header .container .row .right .title {
   object-fit: cover;
   overflow: hidden;
 }
-.card .card-container .card-header .card-header-link figure figcaption .title {
+.card__title {
   font-family: "DM Sans", sans-serif;
   font-size: 36px;
   font-weight: 400;
@@ -277,12 +277,12 @@ header .container .row .right .title {
   margin: 20px 0 0 0;
   text-align: center;
 }
-.card .card-container .card-content {
+.card__content {
   height: 100%;
   width: 200px;
   text-align: center;
 }
-.card .card-container .card-content .subtitle {
+.card__subtitle {
   font-family: "DM Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -290,14 +290,14 @@ header .container .row .right .title {
   line-height: 16.93px;
   color: var(--primary);
 }
-.card .card-container .card-content .description .desc {
+.card__desc {
   font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 13.02px;
 }
-.card .card-container .card-content .description .price {
+.card__price {
   font-family: "DM Sans", sans-serif;
   font-size: 9px;
   font-weight: 400;
@@ -305,10 +305,10 @@ header .container .row .right .title {
   line-height: 11.72px;
   color: var(--dark-gray);
 }
-.card .card-container .card-footer {
+.card__footer {
   margin-top: 8px;
 }
-.card .card-container .card-footer .card-list {
+.card__list {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -317,19 +317,19 @@ header .container .row .right .title {
   padding: 0;
   margin: 0;
 }
-.card .card-container .card-footer .card-list .list-items {
+.card__items {
   height: 22px;
   width: auto;
   list-style: none;
   margin: 2.5px;
 }
-.card .card-container .card-footer .card-list .list-items:first-child {
+.card__items:first-child {
   margin-left: 0;
 }
-.card .card-container .card-footer .card-list .list-items:last-child {
+.card__items:last-child {
   margin-right: 0;
 }
-.card .card-container .card-footer .card-list .list-items .link-item {
+.card__link__item {
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -342,7 +342,7 @@ header .container .row .right .title {
   text-decoration: none;
   transition: all 0.2s;
 }
-.card .card-container .card-footer .card-list .list-items .link-item:hover {
+.card__link__item:hover {
   background-color: var(--primary);
   color: var(--white);
 }

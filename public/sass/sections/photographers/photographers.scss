@@ -3,84 +3,78 @@
     @include align(center);
     min-width: 263px;
     margin-bottom: 51px;
-    .card-container {
+    &__container {
         @include flex(column);
         @include align(inherit, center);
-        .card-header {
-            text-align: center;
-            .card-header-link {
-                text-decoration: none;
-                figure {
-                   margin: 0;
-                    picture {
-                        .image {
-                            @include size(200px, 200px);
-                            border-radius: 50%;
-                            box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
-                            object-fit: cover;
-                            overflow: hidden;
-                        }
-                    }
-                    figcaption {
-                        .title {
-                            @include font(36px, 46.87px, 400);
-                            color: var(--secondary);
-                            margin: 20px 0 0 0;
-                            text-align: center;
-                        }
-                    }
-                }   
-            }
+    }
+    &__header {
+        text-align: center;
+    }
+    &__header__link {
+        text-decoration: none;
+    }
+    &__figure {
+        margin: 0;
+    }                   
+    &__image {
+        @include size(200px, 200px);
+        border-radius: 50%;
+        box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
+        object-fit: cover;
+        overflow: hidden;
+    }              
+    &__title {
+        @include font(36px, 46.87px, 400);
+        color: var(--secondary);
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+    &__content {
+        @include size(200px);
+        text-align: center;
+    }
+    &__subtitle {
+        @include font(13px, 16.93px, 400);
+        color: var(--primary);
+    }          
+    &__desc {
+        @include font(10px, 13.02px, 400);
+    }
+    &__price {
+        @include font(9px, 11.72px, 400);
+        color: var(--dark-gray);
+    }
+    &__footer {
+        margin-top: 8px;
+    }
+    &__list {
+        @include flex();
+        @include align(center);
+        padding: 0;
+        margin: 0;
+    }
+    &__items {
+        @include size(auto, 22px);
+        list-style: none;  
+        margin: 2.5px;
+        &:first-child {
+            margin-left: 0;
         }
-        .card-content {
-            @include size(200px);
-            text-align: center;
-            .subtitle {
-                @include font(13px, 16.93px, 400);
-                color: var(--primary);
-            }
-            .description {  
-                .desc {
-                    @include font(10px, 13.02px, 400);
-                }
-                .price {
-                    @include font(9px, 11.72px, 400);
-                    color: var(--dark-gray);
-                }
-            }
+        &:last-child {
+            margin-right: 0;
         }
-        .card-footer {
-            margin-top: 8px;
-            .card-list {
-                @include flex();
-                @include align(center);
-                padding: 0;
-                margin: 0;
-                .list-items {
-                    @include size(auto, 22px);
-                    list-style: none;  
-                    margin: 2.5px;
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                    .link-item {
-                        @include font(12px, 15.62px, 500);
-                        border: .5px solid #C4C4C4;
-                        border-radius: 11px;
-                        color: var(--primary);
-                        padding: 0.156rem 0.267rem;
-                        text-decoration: none;
-                        transition: all .2s;
-                        &:hover {
-                            background-color: var(--primary);
-                            color: var(--white);
-                        }
-                    }
-                }
-            }
+    }
+    &__link__item {
+        @include font(12px, 15.62px, 500);
+        border: .5px solid #C4C4C4;
+        border-radius: 11px;
+        color: var(--primary);
+        padding: 0.156rem 0.267rem;
+        text-decoration: none;
+        transition: all .2s;
+        &:hover {
+            background-color: var(--primary);
+            color: var(--white);
         }
     }
 }
