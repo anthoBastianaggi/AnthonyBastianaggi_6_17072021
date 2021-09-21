@@ -1,7 +1,7 @@
 @include breakpoint(tactil) {
     .section-contact {
         .modal {
-            .modal-container {
+            &__container {
                 @media (max-width: 670px) {
                     @include fixed-position(inherit, inherit, 0);
                     @include size();

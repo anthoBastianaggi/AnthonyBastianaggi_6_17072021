@@ -2,28 +2,24 @@
     .section-gallery-images {
         .filter {
             display: none;
-        }
-        
-        .gallery-container {
-            .gallery-card {
+        }       
+        .gallery {
+            .gallery__card {
                 @include size(335px, auto);
                 @media (max-width: 374px) {
                     @include size(280px, auto);
                 }
-                .card-figure {
-                    picture .card-image, .card-video {
-                        @include size(335px, 190px);
-                        object-position: center 25%;
-                        @media (max-width: 374px) {
-                            @include size(280px, 170px);
-                        }
+                &__image, &__video {
+                    @include size(335px, 190px);
+                    object-position: center 25%;
+                    @media (max-width: 374px) {
+                        @include size(280px, 170px);
                     }
-    
-                    figcaption {
-                        @include size(335px, auto);
-                        @media (max-width: 374px) {
-                            @include size(280px, auto);
-                        }
+                }
+                &__figcaption {
+                    @include size(335px, auto);
+                    @media (max-width: 374px) {
+                        @include size(280px, auto);
                     }
                 }
             }

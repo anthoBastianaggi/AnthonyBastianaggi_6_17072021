@@ -1,6 +1,6 @@
 @include breakpoint(tactil) {
     .section-gallery-images {
-        .gallery-container {
+        .gallery {
             @media (max-width: 830px) {
                 @include align(center);
                 grid-template-columns: auto;

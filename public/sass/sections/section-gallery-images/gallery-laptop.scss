@@ -1,6 +1,6 @@
 @include breakpoint(laptop) {
     .section-gallery-images { 
-        .gallery-container {
+        .gallery {
             @media (max-width: 1310px) {
                 grid-template-columns: auto auto;
             }

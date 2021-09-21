@@ -13,8 +13,8 @@
     </head>
 
     <body>
-        <header role="banner" class="header">
-            <a href="../index.html" class="link-image">
+        <header role="banner" class="header__photographer">
+            <a href="../index.html" class="header__photographer__link__image">
                 <figure>
                     <img src="https://res.cloudinary.com/dlpyn3wxf/image/upload/v1614078430/logo_mig5no.png" alt="Fisheye Home page" />
                 </figure>
@@ -22,41 +22,41 @@
         </header>
         <main class="main-photographer">
             <section class="section-banner" aria-label="photographer information">
-                <div class="banner-info">
-                    <div class="container">
-                        <div class="row">
-                            <div class="column-left">
-                                <header id="photographer-4" class="banner-header">
-                                    <h1 class="title">Nabeel Bradford</h1>
-                                    <div class="subtitle">
-                                        <span class="locations">Mexico City, Mexico</span>
+                <div class="banner">
+                    <div class="banner__container">
+                        <div class="banner__row">
+                            <div class="banner__column__left">
+                                <header id="photographer-4" class="banner__header">
+                                    <h1 class="banner__title">Nabeel Bradford</h1>
+                                    <div class="banner__subtitle">
+                                        <span class="banner__locations">Mexico City, Mexico</span>
                                     </div>
-                                    <div class="description">
-                                        <span class="desc">Toujours aller de l'avant</span>
+                                    <div class="banner__description">
+                                        <span class="banner__desc">Toujours aller de l'avant</span>
                                     </div>
-                                    <div class="tags">
-                                        <ul class="tags-list">
-                                            <li class="list-items">
-                                                <a class="link-item" href="#">#travel</a>
+                                    <div class="banner__tags">
+                                        <ul class="banner__tags__list">
+                                            <li class="banner__items">
+                                                <a class="banner__link__item" href="#">#travel</a>
                                             </li>
-                                            <li class="list-items">
-                                                <a class="link-item" href="#">#portrait</a>
+                                            <li class="banner__items">
+                                                <a class="banner__link__item" href="#">#portrait</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </header>
-                                <div class="banner-content">
-                                    <button class="btn btn-primary">Contactez-moi</button>
+                                <div class="banner__content">
+                                    <button class="banner__btn banner__btn--primary">Contactez-moi</button>
                                 </div>           
                             </div>
-                            <div class="column-right">
-                                <figure>
+                            <div class="banner__column__right">
+                                <figure class="banner__figure">
                                     <picture>
                                         <source media="(max-width: 640px)" srcset="../public/images/photographers-id/mobile/NabeelBradford-mobile.jpg">
                                         <source media="(max-width: 1080px)" srcset="../public/images/photographers-id/tablet/NabeelBradford-tablet.jpg">
                                         <source media="(max-width: 1438px)" srcset="../public/images/photographers-id/laptop/NabeelBradford-laptop.jpg">
                                         <source media="(min-width: 1439px)" srcset="../public/images/photographers-id/desktop/NabeelBradford-desktop.jpg">
-                                        <img class="image" src="../public/images/photographers-id/desktop/NabeelBradford-desktop.jpg" alt="Nabeel Bradford" />     
+                                        <img class="banner__image" src="../public/images/photographers-id/desktop/NabeelBradford-desktop.jpg" alt="Nabeel Bradford" />     
                                     </picture>  
                                 </figure>
                             </div>
@@ -67,177 +67,177 @@
             
             <section class="section-gallery-images" aria-label="gallery images photographer">
                 <div class="filter">
-                    <span class="text-filter">Trier par</span>
-                    <select class="select">
-                        <option class="option" value="1">Popularity</option>
-                        <option class="option" value="2">Date</option>
-                        <option class="option" value="3">Titre</option>
+                    <span class="filter__text">Trier par</span>
+                    <select class="filter__select">
+                        <option class="filter__select__option" value="1">Popularity</option>
+                        <option class="filter__select__option" value="2">Date</option>
+                        <option class="filter__select__option" value="3">Titre</option>
                     </select>
                 </div>
                 
-                <div class="gallery-container">
-                    <article class="gallery-card">
-                        <figure class="card-figure">
-                            <video class="card-video" title="Rock Mountains" preload="auto" autoplay controls>
+                <div class="gallery">
+                    <article class="gallery__card">
+                        <figure class="gallery__card__figure">
+                            <video class="gallery__card__video" title="Rock Mountains" preload="auto" autoplay controls>
                                 <source src="../public/images/gallery/nabeel-bradford/video/Travel_Rock_Mountains.mp4" type="video/mp4">
                             </video>
-                            <figcaption> 
-                                <h2 class="card-title">Rock Mountains</h2>
-                                <div class="card-likes">
-                                    <span class="likes" aria-label="likes">23</span>
-                                    <i class="fa-2x fa-heart far icon-heart"></i>
+                            <figcaption class="gallery__card__figcaption"> 
+                                <h2 class="gallery__card__title">Rock Mountains</h2>
+                                <div class="gallery__card__likes">
+                                    <span class="gallery__likes" aria-label="likes">23</span>
+                                    <i class="fa-2x fa-heart far gallery__icon__heart"></i>
                                 </div>
                             </figcaption>
                         </figure> 
                     </article>
             
-                    <article class="gallery-card">
-                        <figure class="card-figure">
+                    <article class="gallery__card">
+                        <figure class="gallery__card__figure">
                             <picture>
                                 <source media="(max-width: 640px)" srcset="../public/images/gallery/nabeel-bradford/mobile/Travel_Outdoor_Baths-mobile.jpg">
                                 <source media="(max-width: 1080px)" srcset="../public/images/gallery/nabeel-bradford/tablet/Travel_Outdoor_Baths-tablet.jpg">
                                 <source media="(max-width: 1438px)" srcset="../public/images/gallery/nabeel-bradford/laptop/Travel_Outdoor_Baths-laptop.jpg">
                                 <source media="(min-width: 1439px)" srcset="../public/images/gallery/nabeel-bradford/desktop/Travel_Outdoor_Baths-desktop.jpg">
-                                <img class="card-image" src="../public/images/gallery/nabeel-bradford/desktop/Travel_Outdoor_Baths-desktop.jpg" alt="Outdoor Baths" />
+                                <img class="gallery__card__image" src="../public/images/gallery/nabeel-bradford/desktop/Travel_Outdoor_Baths-desktop.jpg" alt="Outdoor Baths" />
                             </picture>
-                            <figcaption>
-                                <h2 class="card-title">Outdoor Baths</h2>
-                                <div class="card-likes">
-                                    <span class="likes" aria-label="likes">101</span>
-                                    <i class="fa-2x fa-heart far icon-heart"></i>
+                            <figcaption class="gallery__card__figcaption">
+                                <h2 class="gallery__card__title">Outdoor Baths</h2>
+                                <div class="gallery__card__likes">
+                                    <span class="gallery__likes" aria-label="likes">101</span>
+                                    <i class="fa-2x fa-heart far gallery__icon__heart"></i>
                                 </div>
                             </figcaption>
                         </figure>
                     </article>
             
-                    <article class="gallery-card">
-                        <figure class="card-figure">
+                    <article class="gallery__card">
+                        <figure class="gallery__card__figure">
                             <picture>
                                 <source media="(max-width: 640px)" srcset="../public/images/gallery/nabeel-bradford/mobile/Travel_Road_into_Hill-mobile.jpg">
                                 <source media="(max-width: 1080px)" srcset="../public/images/gallery/nabeel-bradford/tablet/Travel_Road_into_Hill-tablet.jpg">
                                 <source media="(max-width: 1438px)" srcset="../public/images/gallery/nabeel-bradford/laptop/Travel_Road_into_Hill-laptop.jpg">
                                 <source media="(min-width: 1439px)" srcset="../public/images/gallery/nabeel-bradford/desktop/Travel_Road_into_Hill-desktop.jpg">
-                                <img class="card-image" src="../public/images/gallery/nabeel-bradford/desktop/Travel_Road_into_Hill-desktop.jpg" alt="Road into the Hill" />
+                                <img class="gallery__card__image" src="../public/images/gallery/nabeel-bradford/desktop/Travel_Road_into_Hill-desktop.jpg" alt="Road into the Hill" />
                             </picture>
-                            <figcaption>
-                                <h2 class="card-title">Road into the Hill</h2>
-                                <div class="card-likes">
-                                    <span class="likes" aria-label="likes">99</span>
-                                    <i class="fa-2x fa-heart far icon-heart"></i>
+                            <figcaption class="gallery__card__figcaption">
+                                <h2 class="gallery__card__title">Road into the Hill</h2>
+                                <div class="gallery__card__likes">
+                                    <span class="gallery__likes" aria-label="likes">99</span>
+                                    <i class="fa-2x fa-heart far gallery__icon__heart"></i>
                                 </div>
                             </figcaption>
                         </figure>
                     </article>
             
-                    <article class="gallery-card">
-                        <figure class="card-figure">
+                    <article class="gallery__card">
+                        <figure class="gallery__card__figure">
                             <picture>
                                 <source media="(max-width: 640px)" srcset="../public/images/gallery/nabeel-bradford/mobile/Travel_Bridge_into_Forest-mobile.jpg">
                                 <source media="(max-width: 1080px)" srcset="../public/images/gallery/nabeel-bradford/tablet/Travel_Bridge_into_Forest-tablet.jpg">
                                 <source media="(max-width: 1438px)" srcset="../public/images/gallery/nabeel-bradford/laptop/Travel_Bridge_into_Forest-laptop.jpg">
                                 <source media="(min-width: 1439px)" srcset="../public/images/gallery/nabeel-bradford/desktop/Travel_Bridge_into_Forest-desktop.jpg">
-                                <img class="card-image" src="../public/images/gallery/nabeel-bradford/desktop/Travel_Bridge_into_Forest-desktop.jpg" alt="Bridge into the Forest" />
+                                <img class="gallery__card__image" src="../public/images/gallery/nabeel-bradford/desktop/Travel_Bridge_into_Forest-desktop.jpg" alt="Bridge into the Forest" />
                             </picture>
-                            <figcaption>
-                                <h2 class="card-title">Bridge into the Forest</h2>
-                                <div class="card-likes">
-                                    <span class="likes" aria-label="likes">34</span>
-                                    <i class="fa-2x fa-heart far icon-heart"></i>
+                            <figcaption class="gallery__card__figcaption">
+                                <h2 class="gallery__card__title">Bridge into the Forest</h2>
+                                <div class="gallery__card__likes">
+                                    <span class="gallery__likes" aria-label="likes">34</span>
+                                    <i class="fa-2x fa-heart far gallery__icon__heart"></i>
                                 </div>
                             </figcaption>
                         </figure>
                     </article>
             
-                    <article class="gallery-card">
-                        <figure class="card-figure">
+                    <article class="gallery__card">
+                        <figure class="gallery__card__figure">
                             <picture>
                                 <source media="(max-width: 640px)" srcset="../public/images/gallery/nabeel-bradford/mobile/Travel_Boat_Wanderer-mobile.jpg">
                                 <source media="(max-width: 1080px)" srcset="../public/images/gallery/nabeel-bradford/tablet/Travel_Boat_Wanderer-tablet.jpg">
                                 <source media="(max-width: 1438px)" srcset="../public/images/gallery/nabeel-bradford/laptop/Travel_Boat_Wanderer-laptop.jpg">
                                 <source media="(min-width: 1439px)" srcset="../public/images/gallery/nabeel-bradford/desktop/Travel_Boat_Wanderer-desktop.jpg">
-                                <img class="card-image" src="../public/images/gallery/nabeel-bradford/desktop/Travel_Boat_Wanderer-desktop.jpg" alt="Boat Wonderer" />
+                                <img class="gallery__card__image" src="../public/images/gallery/nabeel-bradford/desktop/Travel_Boat_Wanderer-desktop.jpg" alt="Boat Wonderer" />
                             </picture>
-                            <figcaption>
-                                <h2 class="card-title">Boat Wonderer</h2>
-                                <div class="card-likes">
-                                    <span class="likes" aria-label="likes">23</span>
-                                    <i class="fa-2x fa-heart far icon-heart"></i>
+                            <figcaption class="gallery__card__figcaption">
+                                <h2 class="gallery__card__title">Boat Wonderer</h2>
+                                <div class="gallery__card__likes">
+                                    <span class="gallery__likes" aria-label="likes">23</span>
+                                    <i class="fa-2x fa-heart far gallery__icon__heart"></i>
                                 </div>
                             </figcaption>
                         </figure>
                     </article>
             
-                    <article class="gallery-card">
-                        <figure class="card-figure">
+                    <article class="gallery__card">
+                        <figure class="gallery__card__figure">
                             <picture>
                                 <source media="(max-width: 640px)" srcset="../public/images/gallery/nabeel-bradford/mobile/Portrait_Sunkissed-mobile.jpg">
                                 <source media="(max-width: 1080px)" srcset="../public/images/gallery/nabeel-bradford/tablet/Portrait_Sunkissed-tablet.jpg">
                                 <source media="(max-width: 1438px)" srcset="../public/images/gallery/nabeel-bradford/laptop/Portrait_Sunkissed-laptop.jpg">
                                 <source media="(min-width: 1439px)" srcset="../public/images/gallery/nabeel-bradford/desktop/Portrait_Sunkissed-desktop.jpg">
-                                <img class="card-image" src="../public/images/gallery/nabeel-bradford/desktop/Portrait_Sunkissed-desktop.jpg" alt="Portrait Sunkiss" />
+                                <img class="gallery__card__image" src="../public/images/gallery/nabeel-bradford/desktop/Portrait_Sunkissed-desktop.jpg" alt="Portrait Sunkiss" />
                             </picture>
-                            <figcaption>
-                                <h2 class="card-title">Portrait Sunkiss</h2>
-                                <div class="card-likes">
-                                    <span class="likes" aria-label="likes">66</span>
-                                    <i class="fa-2x fa-heart far icon-heart"></i>
+                            <figcaption class="gallery__card__figcaption">
+                                <h2 class="gallery__card__title">Portrait Sunkiss</h2>
+                                <div class="gallery__card__likes">
+                                    <span class="gallery__likes" aria-label="likes">66</span>
+                                    <i class="fa-2x fa-heart far gallery__icon__heart"></i>
                                 </div>
                             </figcaption>
                         </figure>
                     </article>
             
-                    <article class="gallery-card">
-                        <figure class="card-figure">
+                    <article class="gallery__card">
+                        <figure class="gallery__card__figure">
                             <picture>
                                 <source media="(max-width: 640px)" srcset="../public/images/gallery/nabeel-bradford/mobile/Portrait_Shaw-mobile.jpg">
                                 <source media="(max-width: 1080px)" srcset="../public/images/gallery/nabeel-bradford/tablet/Portrait_Shaw-tablet.jpg">
                                 <source media="(max-width: 1438px)" srcset="../public/images/gallery/nabeel-bradford/laptop/Portrait_Shaw-laptop.jpg">
                                 <source media="(min-width: 1439px)" srcset="../public/images/gallery/nabeel-bradford/desktop/Portrait_Shaw-desktop.jpg">
-                                <img class="card-image" src="../public/images/gallery/nabeel-bradford/desktop/Portrait_Shaw-desktop.jpg" alt="Shaw Potrait" />
+                                <img class="gallery__card__image" src="../public/images/gallery/nabeel-bradford/desktop/Portrait_Shaw-desktop.jpg" alt="Shaw Potrait" />
                             </picture>
-                            <figcaption>
-                                <h2 class="card-title">Shaw Potrait</h2>
-                                <div class="card-likes">
-                                    <span class="likes" aria-label="likes">52</span>
-                                    <i class="fa-2x fa-heart far icon-heart"></i>
+                            <figcaption class="gallery__card__figcaption">
+                                <h2 class="gallery__card__title">Shaw Potrait</h2>
+                                <div class="gallery__card__likes">
+                                    <span class="gallery__likes" aria-label="likes">52</span>
+                                    <i class="fa-2x fa-heart far gallery__icon__heart"></i>
                                 </div>
                             </figcaption>
                         </figure>
                     </article>
             
-                    <article class="gallery-card">
-                        <figure class="card-figure">
+                    <article class="gallery__card">
+                        <figure class="gallery__card__figure">
                             <picture>
                                 <source media="(max-width: 640px)" srcset="../public/images/gallery/nabeel-bradford/mobile/Portrait_Alexandra-mobile.jpg">
                                 <source media="(max-width: 1080px)" srcset="../public/images/gallery/nabeel-bradford/tablet/Portrait_Alexandra-tablet.jpg">
                                 <source media="(max-width: 1438px)" srcset="../public/images/gallery/nabeel-bradford/laptop/Portrait_Alexandra-laptop.jpg">
                                 <source media="(min-width: 1439px)" srcset="../public/images/gallery/nabeel-bradford/desktop/Portrait_Alexandra-desktop.jpg">
-                                <img class="card-image" src="../public/images/gallery/nabeel-bradford/desktop/Portrait_Alexandra-desktop.jpg" alt="Alexandra" />
+                                <img class="gallery__card__image" src="../public/images/gallery/nabeel-bradford/desktop/Portrait_Alexandra-desktop.jpg" alt="Alexandra" />
                             </picture>
-                            <figcaption>
-                                <h2 class="card-title">Alexandra</h2>
-                                <div class="card-likes">
-                                    <span class="likes" aria-label="likes">95</span>
-                                    <i class="fa-2x fa-heart far icon-heart"></i>
+                            <figcaption class="gallery__card__figcaption">
+                                <h2 class="gallery__card__title">Alexandra</h2>
+                                <div class="gallery__card__likes">
+                                    <span class="gallery__likes" aria-label="likes">95</span>
+                                    <i class="fa-2x fa-heart far gallery__icon__heart"></i>
                                 </div>
                             </figcaption>
                         </figure>
                     </article>
             
-                    <article class="gallery-card">
-                        <figure class="card-figure">
+                    <article class="gallery__card">
+                        <figure class="gallery__card__figure">
                             <picture>
                                 <source media="(max-width: 640px)" srcset="../public/images/gallery/nabeel-bradford/mobile/Portrait_AfternoonBreak-mobile.jpg">
                                 <source media="(max-width: 1080px)" srcset="../public/images/gallery/nabeel-bradford/tablet/Portrait_AfternoonBreak-tablet.jpg">
                                 <source media="(max-width: 1438px)" srcset="../public/images/gallery/nabeel-bradford/laptop/Portrait_AfternoonBreak-laptop.jpg">
                                 <source media="(min-width: 1439px)" srcset="../public/images/gallery/nabeel-bradford/desktop/Portrait_AfternoonBreak-desktop.jpg">
-                                <img class="card-image" src="../public/images/gallery/nabeel-bradford/desktop/Portrait_AfternoonBreak-desktop.jpg" alt="Afternoon Break" />
+                                <img class="gallery__card__image" src="../public/images/gallery/nabeel-bradford/desktop/Portrait_AfternoonBreak-desktop.jpg" alt="Afternoon Break" />
                             </picture>
-                            <figcaption>
-                                <h2 class="card-title">Afternoon Break</h2>
-                                <div class="card-likes">
-                                    <span class="likes" aria-label="likes">25</span>
-                                    <i class="fa-2x fa-heart far icon-heart"></i>
+                            <figcaption class="gallery__card__figcaption">
+                                <h2 class="gallery__card__title">Afternoon Break</h2>
+                                <div class="gallery__card__likes">
+                                    <span class="gallery__likes" aria-label="likes">25</span>
+                                    <i class="fa-2x fa-heart far gallery__icon__heart"></i>
                                 </div>
                             </figcaption>
                         </figure>
@@ -247,34 +247,34 @@
             
             <section class="section-contact">
                 <div class="modal" role="dialog" aria-labelledby="contact-title">
-                    <div class="modal-container">
-                        <header class="modal-header">
-                            <h1 class="modal-title" id="contact-title">Contactez-moi <br>Nabeel Bradford</h1>
-                            <span class="modal-close">&times;</span>
+                    <div class="modal__container">
+                        <header class="modal__header">
+                            <h1 class="modal__title" id="contact-title">Contactez-moi <br>Nabeel Bradford</h1>
+                            <span class="modal__close">&times;</span>
                         </header>
-                        <div class="modal-form">
+                        <div class="modal__form">
                             <form name="contactForm" action="nabeel-bradford.html" method="get" id="contactForm">
-                                <div class="modal-form-group">
-                                    <label for="firstname" class="form-label" id="label-firstname">Prénom</label>
-                                    <input type="text" name="firstname" id="firstname" class="form-input" aria-labelledby="label-firstname" minlength="2" maxlength="64" required />
+                                <div class="modal__form__group">
+                                    <label for="firstname" class="modal__form__label" id="label-firstname">Prénom</label>
+                                    <input type="text" name="firstname" id="firstname" class="modal__form__input" aria-labelledby="label-firstname" minlength="2" maxlength="64" required />
                                     <span id="first-error"></span>
                                 </div>
-                                <div class="modal-form-group">
-                                    <label for="lastname" class="form-label" id="label-lastname">Nom</label>
-                                    <input type="text" name="lastname" id="lastname" class="form-input" aria-labelledby="label-lastname" minlength="2" maxlength="64" required />
+                                <div class="modal__form__group">
+                                    <label for="lastname" class="modal__form__label" id="label-lastname">Nom</label>
+                                    <input type="text" name="lastname" id="lastname" class="modal__form__input" aria-labelledby="label-lastname" minlength="2" maxlength="64" required />
                                     <span id="last-error"></span>
                                 </div>
-                                <div class="modal-form-group">
-                                    <label for="email" class="form-label" id="label-email">Email</label>
-                                    <input type="email" name="email" id="email" class="form-input" aria-labelledby="label-email" required />
+                                <div class="modal__form__group">
+                                    <label for="email" class="modal__form__label" id="label-email">Email</label>
+                                    <input type="email" name="email" id="email" class="modal__form__input" aria-labelledby="label-email" required />
                                     <span id="email-error"></span>
                                 </div>
-                                <div class="modal-form-group form-group-textarea">
-                                    <label for="message" class="form-label" id="label-message">Votre message</label>
-                                    <textarea name="message" id="message" class="form-input" aria-labelledby="label-message" required></textarea>
+                                <div class="modal__form__group modal__form__group--textarea">
+                                    <label for="message" class="modal__form__label" id="label-message">Votre message</label>
+                                    <textarea name="message" id="message" class="modal__form__input modal__form__input--textarea" aria-labelledby="label-message" required></textarea>
                                     <span id="message-error"></span>
                                 </div>
-                                <button class="btn-submit" type="submit">Envoyer</button>
+                                <button class="modal__btn modal__btn--submit" type="submit">Envoyer</button>
                             </form>
                         </div>
                     </div>

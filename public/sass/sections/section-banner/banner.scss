@@ -1,89 +1,84 @@
 .section-banner {
-    .banner-info {
+    .banner {
         background: var(--gray-98);
         margin: 0 32px;
-        .container {
+        &__container {
             padding: 54px 50px 54px 50px;
-            .row {
-                @include flex();
-                @include align(space-between);
-                .column-left {
-                    @include flex();
-                    @include align(space-between);
-                    .banner-header {
-                        margin-right: 120px;
-                        .title {
-                            @include font(64px, 83.33px, 400);
-                            color: var(--secondary);
-                            margin: 0;
-                        }
-                        .subtitle {
-                            @include font(24px, 31.25px, 400);
-                            color: var(--primary);
-                            margin-bottom: 19px;
-                        }
-                        .description {
-                            @include font(18px, 23.44px, 400);
-                            color: var(--tertiary);
-                        }
-                        .tags {
-                            .tags-list {
-                                @include flex();
-                                padding: 0;
-                                margin: 19px 0 0 0;
-                                .list-items {
-                                    @include size(auto, 22px);
-                                    list-style: none;  
-                                    margin: 2.5px;
-                                    &:first-child {
-                                        margin-left: 0;
-                                    }
-                                    &:last-child {
-                                        margin-right: 0;
-                                    }
-                                    .link-item {
-                                        @include font(12px, 15.62px, 500);
-                                        border: .5px solid #C4C4C4;
-                                        border-radius: 11px;
-                                        color: var(--primary);
-                                        padding: 0.156rem 0.267rem;
-                                        text-decoration: none;
-                                        transition: all .2s;
-                                        &:hover {
-                                            background-color: var(--primary);
-                                            color: var(--white);
-                                        }
-                                    }
-                                }
-                            }
-                        }   
-                    }
-                   
-                    .banner-content {
-                        .btn-primary {
-                            @include size(170px, 70px);
-                            @include font(20px, 26.04px, 700);
-                            background: var(--primary);
-                            border: none;
-                            border-radius: 5px;
-                            color: var(--white);
-                            cursor: pointer;
-                        }
-                    }
-                }
-                .column-right {
-                    figure {
-                        margin: 0;
-                        .image {
-                            @include size(200px, 200px);
-                            border-radius: 50%;
-                            box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
-                            object-fit: cover;
-                            overflow: hidden;
-                        }
-                    }
-                }
+        }
+        &__row {
+            @include flex();
+            @include align(space-between);
+        }
+        &__column__left {
+            @include flex();
+            @include align(space-between);
+        }
+        &__header {
+            margin-right: 120px;
+        }
+        &__title {
+            @include font(64px, 83.33px, 400);
+            color: var(--secondary);
+            margin: 0;
+        }
+        &__subtitle {
+            @include font(24px, 31.25px, 400);
+            color: var(--primary);
+            margin-bottom: 19px;
+        }
+        &__description {
+            @include font(18px, 23.44px, 400);
+            color: var(--tertiary);
+        }                 
+        &__tags__list {
+            @include flex();
+            padding: 0;
+            margin: 19px 0 0 0;
+        }
+        &__items {
+            @include size(auto, 22px);
+            list-style: none;  
+            margin: 2.5px;
+            &:first-child {
+                margin-left: 0;
             }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__link__item {
+            @include font(12px, 15.62px, 500);
+            border: .5px solid #C4C4C4;
+            border-radius: 11px;
+            color: var(--primary);
+            padding: 0.156rem 0.267rem;
+            text-decoration: none;
+            transition: all .2s;
+            &:hover {
+                background-color: var(--primary);
+                color: var(--white);
+            }
+        }                  
+        &__btn{
+            @include size(170px, 70px);
+            @include font(20px, 26.04px, 700);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            &--primary {
+                background: var(--primary);
+                color: var(--white);
+            }
+        }
+        &__figure {
+            margin: 0;
+        }
+        &__image {
+            @include size(200px, 200px);
+            border-radius: 50%;
+            box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
+            object-fit: cover;
+            overflow: hidden;
         }
     }
 }
