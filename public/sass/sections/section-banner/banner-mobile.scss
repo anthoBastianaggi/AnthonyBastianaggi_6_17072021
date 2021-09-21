@@ -1,56 +1,42 @@
 @include breakpoint(mobile) {
     .section-banner {
-        .banner-info {
+        .banner {
             background: var(--transparent);
             margin: 0;
-            .container {
+            &__container {
                 padding: 0px 0px 54px 0px;
-                .row {
-                    .column-left {
-                        .banner-header {
-                            margin-right: 15px;
-                            .title {
-                                @include font(36px, 46.87px, 400);
-                            }
-                            .subtitle {
-                                @include font(13px, 16.93px, 400);
-                                margin-bottom: 5px;
-                            }
-                            .description {
-                                @include font(13px, 16.93px, 400);
-                            }
-                            .tags {
-                                .tags-list {
-                                    @include absolute-position();
-                                    margin: 8px 0 0 0;
-                                    .list-items {
-                                        .link-item {
-                                            @include font(13px, 16.93px, 500);
-                                        }
-                                    }
-                                }
-                            }  
-                            .tags-mimi {
-                                .tags-list {
-                                    @media (min-width: 332px) {
-                                        @include relative-position();
-                                        flex-wrap: wrap;
-                                    }  
-                                }
-                            }
-                        } 
-                        .banner-content {
-                            display: none;
-                        }
-                    }
-                    .column-right {
-                        figure {
-                            .image {
-                                @include size(100px, 100px);
-                            }
-                        }
-                    }
-                }
+            }
+            &__header {
+                margin-right: 15px;
+            }
+            &__title {
+                @include font(36px, 46.87px, 400);
+            }
+            &__subtitle {
+                @include font(13px, 16.93px, 400);
+                margin-bottom: 5px;
+            }
+            &__description {
+                @include font(13px, 16.93px, 400);
+            }
+            &__tags__list {
+                @include absolute-position();
+                margin: 8px 0 0 0;
+            }
+            &__link__item {
+                @include font(13px, 16.93px, 500);
+            }
+            &__tags--mimi .banner__tags__list {
+                @media (min-width: 332px) {
+                    @include relative-position();
+                    flex-wrap: wrap;
+                }  
+            }
+            &__content {
+                display: none;
+            }
+            &__image {
+                @include size(100px, 100px);
             }
         }
     }
