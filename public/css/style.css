@@ -793,6 +793,8 @@
 }
 .section-gallery-images .filter {
   margin: 9px 32px 5px 32px;
+  display: flex;
+  flex-direction: row;
 }
 .section-gallery-images .filter__text {
   font-family: "DM Sans", sans-serif;
@@ -802,7 +804,7 @@
   line-height: 23.44px;
   color: var(--black);
 }
-.section-gallery-images .filter__select {
+.section-gallery-images .filter .select {
   height: 69px;
   width: 170px;
   font-family: "DM Sans", sans-serif;
@@ -813,9 +815,106 @@
   border-radius: 5px;
   background-color: var(--primary);
   border: none;
-  padding: 23px 20px;
   color: var(--white);
   margin-left: 25px;
+}
+.section-gallery-images .filter .select__box__container {
+  position: relative;
+  top: inherit;
+  right: inherit;
+  bottom: inherit;
+  left: inherit;
+  height: 69px;
+  width: 100%;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+.section-gallery-images .filter .select__box__container:focus + .select__box__list {
+  opacity: 1;
+  animation-name: none;
+}
+.section-gallery-images .filter .select__box__container:focus + .select__box__list .select__box__option {
+  cursor: pointer;
+}
+.section-gallery-images .filter .select__box__container:focus .select__box__icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+.section-gallery-images .filter .select__box__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  bottom: inherit;
+  left: inherit;
+  height: auto;
+  width: 16px;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+  z-index: 1;
+  color: var(--white);
+}
+.section-gallery-images .filter .select__box__value {
+  display: flex;
+  flex-direction: row;
+  line-height: 39px;
+}
+.section-gallery-images .filter .select__box__input {
+  display: none;
+}
+.section-gallery-images .filter .select__box__input:checked + .select__box__input__text {
+  display: block;
+}
+.section-gallery-images .filter .select__box__input__text {
+  height: auto;
+  width: 100%;
+  display: none;
+  margin: 0;
+  padding: 15px;
+}
+.section-gallery-images .filter .select__box__list {
+  position: relative;
+  top: -69px;
+  right: inherit;
+  bottom: inherit;
+  left: inherit;
+  height: auto;
+  width: 170px;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  animation-name: HideList;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: step-start;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+}
+.section-gallery-images .filter .select__box__list li {
+  border-top: 1px solid white;
+}
+.section-gallery-images .filter .select__box__list li:first-child {
+  border-top: none;
+}
+.section-gallery-images .filter .select__box__list li:first-child .select__box__option {
+  height: 39px;
+  width: auto;
+  border-radius: 5px 5px 0 0;
+  line-height: 39px;
+}
+.section-gallery-images .filter .select__box__list li:last-child .select__box__option {
+  border-radius: 0 0 5px 5px;
+}
+.section-gallery-images .filter .select__box__option {
+  height: 38px;
+  width: auto;
+  display: block;
+  padding: 15px;
+  background-color: var(--primary);
+  line-height: 38px;
+}
+.section-gallery-images .filter .select__box__option:hover {
+  background-color: #651414;
 }
 .section-gallery-images .gallery {
   justify-content: space-between;
@@ -886,6 +985,14 @@
   margin-left: 5px;
 }
 
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
 @media (min-width: 1081px) and (max-width: 1438px) and (max-width: 1310px) {
   .section-gallery-images .gallery {
     grid-template-columns: auto auto;

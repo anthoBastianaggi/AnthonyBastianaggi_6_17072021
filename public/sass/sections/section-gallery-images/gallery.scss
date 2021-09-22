@@ -1,19 +1,102 @@
 .section-gallery-images {
     .filter {
         margin: 9px 32px 5px 32px;
+        @include flex();
         &__text {
             @include font(18px, 23.44px, 700);
             color: var(--black);
         }
-        &__select {
+        .select {
             @include size(170px, 69px);
             @include font(18px, 23.44px, 700);
             border-radius: 5px;
             background-color: var(--primary);
             border: none;
-            padding: 23px 20px;
             color: var(--white);
             margin-left: 25px;
+            &__box__container {
+                @include relative-position();
+                @include size(100%, 69px);
+                box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                outline: none;
+                &:focus + .select__box__list {
+                    opacity: 1;
+                    animation-name: none;
+                    .select__box__option {
+                        cursor: pointer;
+                    }
+                }
+                &:focus {
+                    .select__box__icon {
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+            &__box__icon {
+                @include absolute-position(50%, 15px);
+                @include size(16px, auto);
+                transform: translateY(-50%);
+                transition: 0.2s ease;
+                z-index: 1;
+                color: var(--white);
+            }
+            &__box__value {
+                @include flex();
+                line-height: 39px;
+            }
+            &__box__input {
+                display: none;
+                &:checked + .select__box__input__text {
+                    display: block;
+                }
+            }
+            &__box__input__text {
+                @include size(100%, auto);
+                display: none;
+                margin: 0;
+                padding: 15px;
+            }
+            &__box__list {
+                @include relative-position(-69px);
+                @include size(170px, auto);
+                padding: 0;
+                list-style: none;
+                opacity: 0;
+                animation-name: HideList;
+                animation-duration: 0.5s;
+                animation-delay: 0.5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: step-start;
+                box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+                margin-top: 0;
+                li {
+                    border-top: 1px solid white;
+                    &:first-child {
+                        border-top: none;
+                        .select__box__option {
+                            @include size(auto, 39px);
+                            border-radius: 5px 5px 0 0;
+                            line-height: 39px;
+                        }
+                    }
+                    &:last-child {
+                        .select__box__option {
+                            border-radius: 0 0 5px 5px;
+                        }
+                    }
+                }
+            }
+            &__box__option {
+                @include size(auto, 38px);
+                display: block;
+                padding: 15px;
+                background-color: var(--primary);
+                line-height: 38px;
+                &:hover {
+                    background-color: #651414;
+                }
+            }
         }
     }  
     .gallery {
@@ -64,5 +147,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes HideList {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
     }
 }
