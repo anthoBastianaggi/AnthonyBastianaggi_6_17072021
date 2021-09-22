@@ -1,0 +1,41 @@
+@include breakpoint(mobile) {
+    .section-contact {
+        .modal {
+            &__header {
+                padding: 17px 22px 30px 15px;
+            }
+            &__title{
+                @include font(36px, 46.87px);
+            }
+            &__close{
+                @include size(19px, 19px);
+                @include absolute-position(22px, 27px);
+                font-size: 40px;
+            }
+            &__form {
+                padding: 0 22px 38px 15px;
+            }
+            &__form-group {
+                margin-top: 3px;
+                &--textarea {
+                    margin: 12px 0 26px 0;
+                }
+            }
+            &__form__label {
+                @include font(24px, 31.25px);
+            }
+
+            &__form__input {
+                @include size(auto, 46px);
+                &--textarea {
+                    @include size(auto, 176px);
+                }
+            }
+            &__btn {
+                @include size(170px, 35px);
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}

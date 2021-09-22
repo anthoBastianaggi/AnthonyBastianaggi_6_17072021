@@ -1,0 +1,20 @@
+.footer {
+    @include flex();
+    @include align(space-between, center);
+    @include fixed-position(inherit, 36px, 0);
+    @include size(376px, 68px);
+    background: var(--burning-sand);
+    border-radius: 5px 5px 0 0;
+    padding: 0 30px;
+    &__column {
+        @include flex();
+        @include align(inherit, center);
+    }
+    &__like, &__price {
+        @include font(24px, 31.25px, 500);
+    }
+    &__icon__heart {
+        font-size: 18.35px;
+        margin-left: 6px;
+    }
+}

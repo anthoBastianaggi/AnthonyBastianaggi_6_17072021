@@ -1,0 +1,93 @@
+.section-contact {
+    display: none !important;
+    @include flex(column);
+    @include align(center, center);
+    @include size();
+    @include fixed-position(0, inherit, inherit, 0);
+    z-index: 20;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    .modal {
+        @include size();
+        @include fixed-position(0);
+        background: rgba(196, 196, 196, 0.4);
+        overflow: auto;
+        &__container {
+            @include size(100%, auto);
+            @include maxsize(670px, inherit);
+            @include relative-position();
+            background: var(--burning-sand);
+            margin: 6% auto;
+            border-radius: 5px;
+            animation: open-modal 1.5s ease-in-out normal forwards;
+        }
+        &__header {
+            @include flex();
+            @include align(space-between);
+            padding: 12px 35px 10px 35px;
+        }
+        &__title{
+            @include size(90%, auto);
+            @include font(64px, 83.33px, 400);
+            margin: 0;
+        }
+        &__close{
+            @include size(42px, 47px);
+            @include flex();
+            @include align(center, center);
+            @include absolute-position(29px, 35px);
+            font-size: 90px;
+            cursor: pointer;
+            color: var(--white);
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        &__form {
+            padding: 0 35px 38px;
+        }
+        &__form__group {
+            @include relative-position();
+            @include flex(column);
+            &--textarea {
+                margin: 15px 0 26px 0;
+            }
+        }
+        &__form__label {
+            @include font(36px, 46.87px, 400);
+            color: var(--mine-shaft);
+        }
+        &__form__input {
+            @include size(auto, 62px);
+            &--textarea {
+                @include size(auto, 162px);
+            }
+        }
+        &__btn {
+            @include size(170px, 69px);
+            @include font(18px, 23.44px, 700);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                background: var(--falu-red);
+            }
+            &--submit {
+                background: var(--primary);
+                color: var(--white);
+            }    
+        }
+    }
+}
+
+@include keyframes(open-modal) {
+    0% { 
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+  
+    100% {
+        opacity: 1;
+    }
+  }

@@ -1,0 +1,14 @@
+@include breakpoint(tablet) {
+    .header {
+        &__container {
+            margin: 43px 50px;
+        }
+        &__column--center {
+            @include maxsize(100%, 100%);
+            @include absolute-position(120px, 0);
+        }             
+        &__navbar__center {
+            margin: 0;
+        }
+    }
+}

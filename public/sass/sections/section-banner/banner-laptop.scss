@@ -1,0 +1,22 @@
+@include breakpoint(laptop) {
+    .section-banner {
+        .banner {
+            &__column__left {
+                @include maxsize(100%, 760px);
+                @media (max-width: 1270px) {
+                    @include align(initial);
+                }
+            }
+            &__header {
+                margin-right: 30px;
+                @media (max-width: 1270px) {
+                    @include size(100%, auto);
+                    max-width: 55%;
+                }
+            }
+            &__content {
+                margin-right: auto;
+            }
+        }
+    }   
+}

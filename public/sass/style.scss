@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap);
+@import './modules/mixins.scss';
+@import './utils/variables.scss';
+
+@import './component/header/header.scss';
+@import './component/header/header-laptop.scss';
+@import './component/header/header-tablet.scss';
+@import './component/header/header-mobile.scss';
+@import './component/header-photohrapher/header-photographer.scss';
+@import './component/header-photohrapher/header-photographer-tablet.scss';
+@import './component/header-photohrapher/header-photographer-mobile.scss';
+@import './component/footer/footer.scss';
+@import './component/footer/footer-tablet.scss';
+
+@import './sections/photographers/photographers.scss';
+@import './sections/photographers/photographers-mobile.scss';
+
+@import './sections/section-banner/banner.scss';
+@import './sections/section-banner/banner-laptop.scss';
+@import './sections/section-banner/banner-tablet.scss';
+@import './sections/section-banner/banner-mobile.scss';
+
+@import './sections/section-contact/contact.scss';
+@import './sections/section-contact/contact-tablet.scss';
+@import './sections/section-contact/contact-mobile.scss';
+
+@import './sections/section-gallery-images/gallery.scss';
+@import './sections/section-gallery-images/gallery-laptop.scss';
+@import './sections/section-gallery-images/gallery-tablet.scss';
+@import './sections/section-gallery-images/gallery-mobile.scss';
+
+@import './sections/section-modal-images/modal.scss';
+@import './sections/section-modal-images/modal-laptop.scss';
+@import './sections/section-modal-images/modal-tablet.scss';
+@import './sections/section-modal-images/modal-mobile.scss';
+
+body {
+    margin: 0;
+}
+.main {
+    position: relative;
+    top: 60px;
+    margin: 0 68px;
+    @include breakpoint(laptop) {
+        top: 117px;
+    }
+    @include breakpoint(tablet) {
+        top: 117px;
+        margin: 0 18px;
+    }
+    @include breakpoint(mobile) {
+        top: 85px;
+        margin: 0 20px;
+    }
+    @media (max-width: 344px) {
+        top: 117px;
+    }
+}
+.main-photographer {
+    position: relative;
+    margin: 0 68px 68px 68px;
+    @include breakpoint(tablet) {
+        margin: 0 18px 68px 18px;
+    }
+    @include breakpoint(mobile) {
+        margin: 0 20px 40px 20px;
+    }
+}
+.section {
+    display: grid;
+    justify-content: space-between;
+    padding: 0;
+    grid-template-columns: auto auto auto;
+    @media (max-width: 900px) {
+        grid-template-columns: auto auto;
+    }
+    @include breakpoint(mobile) {
+        justify-content: center;
+        grid-template-columns: auto;
+    }
+}

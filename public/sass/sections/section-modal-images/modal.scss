@@ -1,0 +1,92 @@
+.section-modal-image {
+    display: none !important;
+    @include flex(column);
+    @include align(center, center);
+    @include size();
+    @include fixed-position(0, inherit, inherit, 0);
+    z-index: 20;
+    background: rgba(196, 196, 196, 0.4);
+    .slider {
+        @include size(1255px, 100%);
+        @include fixed-position(inherit, inherit, inherit, initial);
+        overflow: auto;
+        background: var(--white);
+        &__close {
+            @include absolute-position(inherit, 20px, inherit, initial);
+            padding: 17px 20px 0 20px;
+            cursor: pointer;
+            font-size: 77px;
+            color: var(--primary);
+        }      
+        &__list__item {
+            @include relative-position();
+            @include size(1050px, 100%);
+            margin: 22px auto 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+        &__input {
+            display: none; 
+            &:checked + {
+               .slider__item__container {
+                   .slider__article {
+                        opacity: 1;
+                        transform: scale(1);
+                        transition: opacity 1s ease-in-out;
+                   } 
+                   .slider__controls label {
+                        display: block;
+                    }
+               }     
+            }
+        }
+        &__item {    
+            &--video {
+                @include relative-position();
+                z-index: 1;
+            }   
+        }
+        &__article {
+            @include absolute-position();
+            @include size();
+            opacity: 0;
+            transition: all .7s ease-in-out;
+        }
+        &__figure {
+            margin: 0;
+        }  
+        &__image {
+            @include size(100%, 900px);
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        &__video {
+            @include size(100%, 900px);
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        &__title {
+            @include font(24px, 31px);
+            color: var(--primary);
+            margin: 12px 0 20px 0;
+        }
+        &__controls {
+            color: var(--primary);
+        }
+        &__prev {
+            @include absolute-position(450px, inherit, inherit, -83px);
+            display: none;
+            padding: 0 20px;
+            cursor: pointer;
+            font-size: 48px;
+        }    
+        &__next {
+            @include absolute-position(450px, -83px);
+            display: none;
+            padding: 0 20px;
+            cursor: pointer;
+            font-size: 48px;
+        }
+    }
+}

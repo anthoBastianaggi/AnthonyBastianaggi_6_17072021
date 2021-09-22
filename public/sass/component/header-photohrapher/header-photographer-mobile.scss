@@ -1,0 +1,8 @@
+@include breakpoint(mobile) {
+    .header__photographer {
+        margin: 43px 20px 30px 20px;
+        &__link__image figure img {
+            @include size(150px, 100%);
+        }
+    }
+}
