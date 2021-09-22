@@ -71,11 +71,34 @@
             <section class="section-gallery-images" aria-label="gallery images photographer">
                 <div class="filter">
                     <span class="filter__text">Trier par</span>
-                    <select class="filter__select">
-                        <option class="filter__select__option" value="1">Popularity</option>
-                        <option class="filter__select__option" value="2">Date</option>
-                        <option class="filter__select__option" value="3">Titre</option>
-                    </select>
+                    <div class="select">
+                        <div class="select__box__container" tabindex="1">
+                            <div class="select__box__value">
+                                <input class="select__box__input" type="radio" id="0" name="input-option" checked="checked"/>
+                                <p class="select__box__input__text">Popularité</p>
+                            </div>
+                            <div class="select__box__value">
+                                <input class="select__box__input" type="radio" id="1" name="input-option"/>
+                                <p class="select__box__input__text">Date</p>
+                            </div>
+                            <div class="select__box__value">
+                                <input class="select__box__input" type="radio" id="2" name="input-option"/>
+                                <p class="select__box__input__text">Titre</p>
+                            </div>
+                            <i class="fas fa-chevron-down select__box__icon"></i>
+                        </div>
+                        <ul class="select__box__list">
+                            <li>
+                                <label class="select__box__option" for="0">Popularité</label>
+                            </li>
+                            <li>
+                                <label class="select__box__option" for="1">Date</label>
+                            </li>
+                            <li>
+                                <label class="select__box__option" for="2">Titre</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="gallery">
