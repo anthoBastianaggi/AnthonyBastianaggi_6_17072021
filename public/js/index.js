@@ -1,8 +1,10 @@
+import HomePage from "./home/home.js";
 import ApiFishEye from "./server/services/client.js";
 
 function appDispatch() {
     new ApiFishEye().getPhotographers().then((data) => {
-       console.log(data.photographers)
+        let dataPhotographers = data.photographers;
+        new HomePage().displayDataPhotographers(dataPhotographers);
     }).catch(() => {
         console.error('Failed to load ApiFishEye');
     })
