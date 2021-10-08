@@ -1,0 +1,16 @@
+{
+    "firstNameValueMissing": "Veuillez rentrer votre prénom.",
+    "firstNameValueRegex": "Veuillez rentrer un prénom valide.",
+    "firstNameValueMinLength": "Veuillez entrer un prénom comportant 2 caractères ou plus.",
+    "firstNameValueMaxLength": "Prénom trop long. Veuillez entrer un prénom comportant moins de 64 caractères.",
+    "lastNameValueMissing": "Veuillez rentrer votre nom.",
+    "lastNameValueRegex": "Veuillez rentrer un nom valide.",
+    "lastNameValueMinLength": "Veuillez entrer un nom comportant 2 caractères ou plus.",
+    "lastNameValueMaxLength": "Nom trop long. Veuillez entrer un nom comportant moins de 64 caractères.",
+    "emailValueMissing": "Veuillez rentrer votre email.",
+    "emailValueRegex": "Veuillez rentrer un email valide.",
+    "messageValueMissing": "Veuillez rentrer votre message.",
+    "messageValueRegex": "Veuillez rentrer un message valide.",
+    "messageValueMinLength": "Veuillez entrer un message comportant 5 caractères ou plus.",
+    "messageValueMaxLength": "Prénom trop long. Veuillez entrer un message comportant moins de 1000 caractères."
+}    
