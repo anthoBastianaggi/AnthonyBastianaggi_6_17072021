@@ -10,9 +10,15 @@ function appDispatch() {
             new PhotographerProfil().displayBanner(dataPhotographers);
             new PhotographerProfil().displayMedias(dataMedias, dataPhotographers);
             new PhotographerProfil().displayFooter(dataPhotographers, dataMedias);
+            new ApiFishEye().getDataErrors('../public/json/errorMessages.json').then((dataErrors) => {
+                new PhotographerProfil().displayContact(dataErrors, dataPhotographers);
+            }).catch(() => {
+                console.error('Failed to load ApiFishEye');
+            })
         }).catch(() => {
             console.error('Failed to load ApiFishEye');
         })
+  
     } else {
         new ApiFishEye().getDataFishEye('public/json/api.json').then((data) => {
             let dataPhotographers = data.photographers;

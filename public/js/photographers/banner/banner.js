@@ -24,7 +24,7 @@ export default class Banner {
                             </div>
                         </header>
                         <div class="banner__content">
-                            <button class="banner__btn banner__btn--primary">Contactez-moi</button>
+                            <button class="banner__btn banner__btn--primary" id="btn-open-modal">Contactez-moi</button>
                         </div>           
                     </div>
                     <div class="banner__column__right">

@@ -13,6 +13,10 @@
     </head>
 
     <body>
+        <div class="alert__success" id="alert-success">
+          <strong>Succès!</strong> Votre message à bien été envoyé.
+        </div>
+        
         <header role="banner" class="header__photographer">
             <a href="../index.html" class="header__photographer__link__image">
                 <figure>
@@ -61,12 +65,12 @@
                    
             </section>
 
-            <section class="section-contact">
-                <div class="modal" role="dialog" aria-labelledby="contact-title">
+            <section class="section-contact" id="section-modal-contact">
+                <div class="modal" id="modal-contact" role="dialog" aria-labelledby="contact-title">
                     <div class="modal__container">
                         <header class="modal__header">
-                            <h1 class="modal__title" id="contact-title">Contactez-moi <br>Mimi Keel</h1>
-                            <span class="modal__close">&times;</span>
+                            <h1 class="modal__title" id="contact-title"></h1>
+                            <span class="modal__close" id="btn-close-modal">&times;</span>
                         </header>
                         <div class="modal__form">
                             <form name="contactForm" action="mimi-keel.html" method="get" id="contactForm">
@@ -87,10 +91,10 @@
                                 </div>
                                 <div class="modal__form__group modal__form__group--textarea">
                                     <label for="message" class="modal__form__label" id="label-message">Votre message</label>
-                                    <textarea name="message" id="message" class="modal__form__input modal__form__input--textarea" aria-labelledby="label-message" required></textarea>
+                                    <textarea name="message" id="message" class="modal__form__input modal__form__input--textarea" aria-labelledby="label-message" minlength="5" maxlength="1000" required></textarea>
                                     <span id="message-error"></span>
                                 </div>
-                                <button class="modal__btn modal__btn--submit" type="submit">Envoyer</button>
+                                <button class="modal__btn modal__btn--submit" id="btn-submit" type="button">Envoyer</button>
                             </form>
                         </div>
                     </div>

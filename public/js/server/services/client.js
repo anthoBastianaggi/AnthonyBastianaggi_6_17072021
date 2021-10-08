@@ -8,4 +8,12 @@ export default class ApiFishEye {
         };
         return await fetch(url, requestOptions).then(response);
     }
+
+    async getDataErrors(url) {
+        let response = fetchWrapper.handleResponse;
+        const requestOptions = {
+            method: 'GET'
+        };
+        return await fetch(url, requestOptions).then(response);
+    }
 }

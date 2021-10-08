@@ -1,6 +1,6 @@
 .section-contact {
-    display: none !important;
-    @include flex(column);
+    display: none; 
+    flex-direction: column;
     @include align(center, center);
     @include size();
     @include fixed-position(0, inherit, inherit, 0);
@@ -53,6 +53,11 @@
             &--textarea {
                 margin: 15px 0 26px 0;
             }
+            #first-error, #last-error, #email-error, #message-error {
+                font-size: 20px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
         }
         &__form__label {
             @include font(36px, 46.87px, 400);
@@ -60,10 +65,31 @@
         }
         &__form__input {
             @include size(auto, 62px);
+            font-size: 20px;
+            &:focus {
+                outline: 0;
+                border: 2px solid #007aff;
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.4);
+            }
             &--textarea {
                 @include size(auto, 162px);
+                font-size: 20px;
+                &:focus {
+                    outline: 0;
+                    border: 2px solid #007aff;
+                    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.4);
+                }
             }
         }
+        &__form__input.invalid {
+            border: 2px solid #e54858;
+            background-color: #ffdddd;
+            &:focus {
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem rgba(229, 72, 88, 0.4);
+            }
+        }
+        
         &__btn {
             @include size(170px, 69px);
             @include font(18px, 23.44px, 700);

@@ -2,6 +2,7 @@ import Banner from "./banner/banner.js";
 import Gallery from "./gallery/gallery.js";
 import Footer from "./footer/footer.js"
 import Utils from "../utils/utils.js";
+import Contact from "./contact/contact.js";
 
 export default class PhotographerProfil {
     displayBanner(data) {
@@ -22,6 +23,10 @@ export default class PhotographerProfil {
 
     displayMedias(dataMedias, dataPhotographers) {
         new Gallery().galleryMedias(dataMedias, dataPhotographers);
+    }
+
+    displayContact(dataErrors, dataPhotographers) {
+        new Contact().formContact(dataErrors, dataPhotographers);
     }
 
     displayFooter(dataPhotographers, dataMedias) {
