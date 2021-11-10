@@ -34,28 +34,28 @@
                     <div class="select">
                         <div class="select__box__container" tabindex="1">
                             <div class="select__box__value">
-                                <input class="select__box__input" type="radio" id="0" name="input-option" checked="checked"/>
+                                <input class="select__box__input" type="radio" id="input-0" name="input-option" checked="checked"/>
                                 <p class="select__box__input__text">Popularité</p>
                             </div>
                             <div class="select__box__value">
-                                <input class="select__box__input" type="radio" id="1" name="input-option"/>
+                                <input class="select__box__input" type="radio" id="input-1" name="input-option"/>
                                 <p class="select__box__input__text">Date</p>
                             </div>
                             <div class="select__box__value">
-                                <input class="select__box__input" type="radio" id="2" name="input-option"/>
+                                <input class="select__box__input" type="radio" id="input-2" name="input-option"/>
                                 <p class="select__box__input__text">Titre</p>
                             </div>
                             <i class="fas fa-chevron-down select__box__icon"></i>
                         </div>
                         <ul class="select__box__list">
                             <li>
-                                <label class="select__box__option" for="0">Popularité</label>
+                                <label class="select__box__option" for="input-0">Popularité</label>
                             </li>
                             <li>
-                                <label class="select__box__option" for="1">Date</label>
+                                <label class="select__box__option" for="input-1">Date</label>
                             </li>
                             <li>
-                                <label class="select__box__option" for="2">Titre</label>
+                                <label class="select__box__option" for="input-2">Titre</label>
                             </li>
                         </ul>
                     </div>
@@ -101,287 +101,25 @@
                 </div>
             </section>
 
-            <section class="section-modal-image" aria-label="modal image photographer">
-                <div class="slider" role="dialog" aria-label="image closeup view">
-                    <span class="slider__close" role="button" aria-label="close dialog">&times;</span>
-                    <ul class="slider__list__item">
-                      <li class="slider__item">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-1" checked />
+            <section class="section-modal-image" id="section-slider" aria-label="modal image photographer">
+              <div class="slider" id="slider-images" role="dialog" aria-label="image closeup view">
+                <span class="slider__close" id="close-slider" role="button" aria-label="close dialog">&times;</span>
+                <ul class="slider__list__item">
+                    <li class="slider__item">
                         <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <picture>
-                                        <source media="(max-width: 640px)" srcset="../public/images/gallery/mimi-keel/mobile/Travel_Lonesome-mobile.jpg">
-                                        <source media="(max-width: 1080px)" srcset="../public/images/gallery/mimi-keel/tablet/Travel_Lonesome-tablet.jpg">
-                                        <source media="(max-width: 1438px)" srcset="../public/images/gallery/mimi-keel/laptop/Travel_Lonesome-laptop.jpg">
-                                        <source media="(min-width: 1439px)" srcset="../public/images/gallery/mimi-keel/desktop/Travel_Lonesome-desktop.jpg">
-                                        <img class="slider__image" src="../public/images/gallery/mimi-keel/desktop/Travel_Lonesome-desktop.jpg" alt="Lonesome" />
-                                    </picture>
-                                    <figcaption>
-                                        <h2 class="slider__title">Lonesome</h2>
-                                    </figcaption>
-                                </figure>
-                            </article>
+                            <article class="slider__article"></article>
                             <div class="slider__controls">
-                              <label for="img-10" class="slider__prev" aria-label="previous image">
+                                <button class="slider__prev" aria-label="previous image">
                                 <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-2" class="slider__next" aria-label="next image">
+                            </button>
+                            <button class="slider__next" aria-label="next image">
                                 <i class="fas fa-chevron-right"></i>
-                              </label>
+                            </button>
                             </div>
                         </div>            
-                      </li>
-                  
-                      <li class="slider__item">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-2" />
-                        <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <picture>
-                                        <source media="(max-width: 640px)" srcset="../public/images/gallery/mimi-keel/mobile/Travel_HillsideColor-mobile.jpg">
-                                        <source media="(max-width: 1080px)" srcset="../public/images/gallery/mimi-keel/tablet/Travel_HillsideColor-tablet.jpg">
-                                        <source media="(max-width: 1438px)" srcset="../public/images/gallery/mimi-keel/laptop/Travel_HillsideColor-laptop.jpg">
-                                        <source media="(min-width: 1439px)" srcset="../public/images/gallery/mimi-keel/desktop/Travel_HillsideColor-desktop.jpg">
-                                        <img class="slider__image" src="../public/images/gallery/mimi-keel/desktop/Travel_HillsideColor-desktop.jpg" alt="Hillside Color" />
-                                    </picture>
-                                    <figcaption>
-                                        <h2 class="slider__title">Hillside Color</h2>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                            <div class="slider__controls">
-                              <label for="img-1" class="slider__prev" aria-label="previous image">
-                                <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-3" class="slider__next" aria-label="next image">
-                                <i class="fas fa-chevron-right"></i>
-                              </label>
-                            </div>
-                        </div>            
-                      </li>
-                
-                      <li class="slider__item">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-3" />
-                        <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <picture>
-                                        <source media="(max-width: 640px)" srcset="../public/images/gallery/mimi-keel/mobile/Portrait_Wednesday-mobile.jpg">
-                                        <source media="(max-width: 1080px)" srcset="../public/images/gallery/mimi-keel/tablet/Portrait_Wednesday-tablet.jpg">
-                                        <source media="(max-width: 1438px)" srcset="../public/images/gallery/mimi-keel/laptop/Portrait_Wednesday-laptop.jpg">
-                                        <source media="(min-width: 1439px)" srcset="../public/images/gallery/mimi-keel/desktop/Portrait_Wednesday-desktop.jpg">
-                                        <img class="slider__image" src="../public/images/gallery/mimi-keel/desktop/Portrait_Wednesday-desktop.jpg" alt="Wednesday Potrait" />
-                                    </picture>
-                                    <figcaption>
-                                        <h2 class="slider__title">Wednesday Potrait</h2>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                            <div class="slider__controls">
-                              <label for="img-2" class="slider__prev" aria-label="previous image">
-                                <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-4" class="slider__next" aria-label="next image">
-                                <i class="fas fa-chevron-right"></i>
-                              </label>
-                            </div>
-                        </div>         
-                      </li>
-                
-                      <li class="slider__item">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-4" />
-                        <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <picture>
-                                        <source media="(max-width: 640px)" srcset="../public/images/gallery/mimi-keel/mobile/Portrait_Nora-mobile.jpg">
-                                        <source media="(max-width: 1080px)" srcset="../public/images/gallery/mimi-keel/tablet/Portrait_Nora-tablet.jpg">
-                                        <source media="(max-width: 1438px)" srcset="../public/images/gallery/mimi-keel/laptop/Portrait_Nora-laptop.jpg">
-                                        <source media="(min-width: 1439px)" srcset="../public/images/gallery/mimi-keel/desktop/Portrait_Nora-desktop.jpg">
-                                        <img class="slider__image" src="../public/images/gallery/mimi-keel/desktop/Portrait_Nora-desktop.jpg" alt="Nora Portrait" />
-                                    </picture>
-                                    <figcaption>
-                                        <h2 class="slider__title">Nora Portrait</h2>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                            <div class="slider__controls">
-                              <label for="img-3" class="slider__prev" aria-label="previous image">
-                                <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-5" class="slider__next" aria-label="next image">
-                                <i class="fas fa-chevron-right"></i>
-                              </label>
-                            </div>
-                        </div>
-                      </li>
-                
-                      <li class="slider__item">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-5" />
-                        <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <picture>
-                                        <source media="(max-width: 640px)" srcset="../public/images/gallery/mimi-keel/mobile/Portrait_Background-mobile.jpg">
-                                        <source media="(max-width: 1080px)" srcset="../public/images/gallery/mimi-keel/tablet/Portrait_Background-tablet.jpg">
-                                        <source media="(max-width: 1438px)" srcset="../public/images/gallery/mimi-keel/laptop/Portrait_Background-laptop.jpg">
-                                        <source media="(min-width: 1439px)" srcset="../public/images/gallery/mimi-keel/desktop/Portrait_Background-desktop.jpg">
-                                        <img class="slider__image" src="../public/images/gallery/mimi-keel/desktop/Portrait_Background-desktop.jpg" alt="Raw Black Portrait" />
-                                    </picture>
-                                    <figcaption>
-                                        <h2 class="slider__title">Raw Black Portrait</h2>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                            <div class="slider__controls">
-                              <label for="img-4" class="slider__prev" aria-label="previous image">
-                                <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-6" class="slider__next" aria-label="next image">
-                                <i class="fas fa-chevron-right"></i>
-                              </label>
-                            </div>
-                        </div>
-                      </li>
-                  
-                      <li class="slider__item">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-6" />
-                        <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <picture>
-                                        <source media="(max-width: 640px)" srcset="../public/images/gallery/mimi-keel/mobile/Event_SeasideWedding-mobile.jpg">
-                                        <source media="(max-width: 1080px)" srcset="../public/images/gallery/mimi-keel/tablet/Event_SeasideWedding-tablet.jpg">
-                                        <source media="(max-width: 1438px)" srcset="../public/images/gallery/mimi-keel/laptop/Event_SeasideWedding-laptop.jpg">
-                                        <source media="(min-width: 1439px)" srcset="../public/images/gallery/mimi-keel/desktop/Event_SeasideWedding-desktop.jpg">
-                                        <img class="slider__image" src="../public/images/gallery/mimi-keel/desktop/Event_SeasideWedding-desktop.jpg" alt="Seaside Wedding" />
-                                    </picture>
-                                    <figcaption>
-                                        <h2 class="slider__title">Seaside Wedding</h2>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                            <div class="slider__controls">
-                              <label for="img-5" class="slider__prev" aria-label="previous image">
-                                <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-7" class="slider__next" aria-label="next image">
-                                <i class="fas fa-chevron-right"></i>
-                              </label>
-                            </div>
-                        </div>               
-                      </li>
-                
-                      <li class="slider__item">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-7" />
-                        <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <picture>
-                                        <source media="(max-width: 640px)" srcset="../public/images/gallery/mimi-keel/mobile/Event_PintoWedding-mobile.jpg">
-                                        <source media="(max-width: 1080px)" srcset="../public/images/gallery/mimi-keel/tablet/Event_PintoWedding-tablet.jpg">
-                                        <source media="(max-width: 1438px)" srcset="../public/images/gallery/mimi-keel/laptop/Event_PintoWedding-laptop.jpg">
-                                        <source media="(min-width: 1439px)" srcset="../public/images/gallery/mimi-keel/desktop/Event_PintoWedding-desktop.jpg">
-                                        <img class="slider__image" src="../public/images/gallery/mimi-keel/desktop/Event_PintoWedding-desktop.jpg" alt="Boulder Wedding" />
-                                    </picture>
-                                    <figcaption>
-                                        <h2 class="slider__title">Boulder Wedding</h2>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                            <div class="slider__controls">
-                              <label for="img-6" class="slider__prev" aria-label="previous image">
-                                <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-8" class="slider__next" aria-label="next image">
-                                <i class="fas fa-chevron-right"></i>
-                              </label>
-                            </div>
-                        </div>      
-                      </li>
-                
-                      <li class="slider__item">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-8" />
-                        <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <picture>
-                                        <source media="(max-width: 640px)" srcset="../public/images/gallery/mimi-keel/mobile/Event_BenevidesWedding-mobile.jpg">
-                                        <source media="(max-width: 1080px)" srcset="../public/images/gallery/mimi-keel/tablet/Event_BenevidesWedding-tablet.jpg">
-                                        <source media="(max-width: 1438px)" srcset="../public/images/gallery/mimi-keel/laptop/Event_BenevidesWedding-laptop.jpg">
-                                        <source media="(min-width: 1439px)" srcset="../public/images/gallery/mimi-keel/desktop/Event_BenevidesWedding-desktop.jpg">
-                                        <img class="slider__image" src="../public/images/gallery/mimi-keel/desktop/Event_BenevidesWedding-desktop.jpg" alt="Benevides Wedding" />
-                                    </picture>
-                                    <figcaption>
-                                        <h2 class="slider__title">Benevides Wedding</h2>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                            <div class="slider__controls">
-                              <label for="img-7" class="slider__prev" aria-label="previous image">
-                                <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-9" class="slider__next" aria-label="next image">
-                                <i class="fas fa-chevron-right"></i>
-                              </label>
-                            </div>
-                        </div>        
-                      </li>
-                
-                      <li class="slider__item slider__item--video">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-9"/>
-                        <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <video class="slider__video" title="Wild Horses in the Mountains" preload="auto" autoplay controls>
-                                        <source src="../public/images/gallery/mimi-keel/video/Animals_Wild_Horses_in_the_mountains.mp4" type="video/mp4">
-                                    </video>
-                                    <figcaption> 
-                                        <h2 class="slider__title">Wild Horses in the Mountains</h2>
-                                    </figcaption>
-                                </figure> 
-                            </article>
-                            <div class="slider__controls">
-                              <label for="img-8" class="slider__prev" aria-label="previous image">
-                                <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-10" class="slider__next" aria-label="next image">
-                                <i class="fas fa-chevron-right"></i>
-                              </label>
-                            </div>
-                        </div>                    
-                      </li>
-
-                      <li class="slider__item">
-                        <input class="slider__input" type="radio" name="radio-buttons" id="img-10" />
-                        <div class="slider__item__container">
-                            <article class="slider__article">
-                                <figure class="slider__figure">
-                                    <picture>
-                                        <source media="(max-width: 640px)" srcset="../public/images/gallery/mimi-keel/mobile/Animals_Rainbow-mobile.jpg">
-                                        <source media="(max-width: 1080px)" srcset="../public/images/gallery/mimi-keel/tablet/Animals_Rainbow-tablet.jpg">
-                                        <source media="(max-width: 1438px)" srcset="../public/images/gallery/mimi-keel/laptop/Animals_Rainbow-laptop.jpg">
-                                        <source media="(min-width: 1439px)" srcset="../public/images/gallery/mimi-keel/desktop/Animals_Rainbow-desktop.jpg">
-                                        <img class="slider__image" src="../public/images/gallery/mimi-keel/desktop/Animals_Rainbow-desktop.jpg" alt="Rainbow Bird" />
-                                    </picture>
-                                    <figcaption>
-                                        <h2 class="slider__title">Rainbow Bird</h2>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                            <div class="slider__controls">
-                              <label for="img-9" class="slider__prev" aria-label="previous image">
-                                <i class="fas fa-chevron-left"></i>
-                              </label>
-                              <label for="img-1" class="slider__next" aria-label="next image">
-                                <i class="fas fa-chevron-right"></i>
-                              </label>
-                            </div>
-                        </div>   
-                      </li>
-                    </ul>
-                </div>
+                    </li>
+                </ul>
+              </div>
             </section>
         </main>
 

@@ -109,7 +109,7 @@
             @include size(350px, auto);
             margin-top: 25px;
             &__figure {
-                margin: 0;
+               margin: 0;
             }
             &__image, &__video {
                 @include size(350px, 300px);

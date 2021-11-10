@@ -23,6 +23,7 @@ export default class PhotographerProfil {
 
     displayMedias(dataMedias, dataPhotographers) {
         new Gallery().galleryMedias(dataMedias, dataPhotographers);
+        new Gallery().displaySlider();
     }
 
     displayContact(dataErrors, dataPhotographers) {

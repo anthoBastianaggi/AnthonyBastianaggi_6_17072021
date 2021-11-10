@@ -10,8 +10,8 @@ export default class Utils {
     }
 
     getTotalLikes(data){
-        var total = 0;
-        for(var i in data) { 
+        let total = 0;
+        for(let i in data) { 
             total += data[i];
         }
         return total;
