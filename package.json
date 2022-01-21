@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/anthoBastianaggi/AnthonyBastianaggi_6_17072021/issues"
   },
-  "homepage": "https://github.com/anthoBastianaggi/AnthonyBastianaggi_6_17072021#readme"
+  "homepage": "https://github.com/anthoBastianaggi/AnthonyBastianaggi_6_17072021#readme",
+  "dependencies": {
+    "eslint": "^8.4.0",
+    "eslint-config-airbnb": "^19.0.2"
+  }
 }

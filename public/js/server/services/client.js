@@ -1,19 +1,11 @@
-import { fetchWrapper } from '../helpers/request-helpers.js';
+import { handleResponse } from '../helpers/request-helpers.js';
 
-export default class ApiFishEye {
-    async getDataFishEye(url) {
-        let response = fetchWrapper.handleResponse;
-        const requestOptions = {
-            method: 'GET'
-        };
-        return await fetch(url, requestOptions).then(response);
+export const apiFishEye = (url) => {
+    const getData = async () => {
+        let response = handleResponse;
+       
+        return await fetch(url, { method: 'GET' }).then(response);
     }
 
-    async getDataErrors(url) {
-        let response = fetchWrapper.handleResponse;
-        const requestOptions = {
-            method: 'GET'
-        };
-        return await fetch(url, requestOptions).then(response);
-    }
+    return getData();
 }
