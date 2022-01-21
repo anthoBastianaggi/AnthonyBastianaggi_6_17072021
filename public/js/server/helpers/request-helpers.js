@@ -1,4 +1,4 @@
-function handleResponse(response) {
+export const handleResponse = (response) => {
     return response.text().then(text => {
         if(response.status >= 200 && response.status <= 299) {
             const data = text && JSON.parse(text);
@@ -6,7 +6,3 @@ function handleResponse(response) {
         }
     });
 }
-
-export const fetchWrapper = {
-    handleResponse
-};

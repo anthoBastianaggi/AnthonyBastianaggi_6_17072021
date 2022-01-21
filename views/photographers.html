@@ -26,7 +26,31 @@
         </header>
 
         <main class="main-photographer">
-            <section class="section-banner" aria-label="photographer information" id="section-banner-photographer"></section>
+            <section class="section-banner" aria-label="photographer information" id="section-banner-photographer">
+                <div class="banner">
+                    <div class="banner__container">
+                        <div class="banner__row">
+                            <div class="banner__column__left">
+                                <header class="banner__header" id="header-banner">
+                                    <h1 class="banner__title" id="name"></h1>
+                                    <div class="banner__subtitle">
+                                        <span class="banner__locations" id="location"></span>
+                                    </div>
+                                    <div class="banner__description">
+                                        <span class="banner__desc" id="tagline"></span>
+                                    </div>
+                                </header>
+                                <div class="banner__content">
+                                    <button class="banner__btn banner__btn--primary" id="btn-open-modal">Contactez-moi</button>
+                                </div>           
+                            </div>
+                            <div class="banner__column__right">
+                                <figure class="banner__figure" id="figure-image-banner"></figure>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
             <section class="section-gallery-images" aria-label="gallery images photographer" id="section-medias-photographer">
                 <div class="filter">
@@ -123,7 +147,17 @@
             </section>
         </main>
 
-        <footer class="footer" id="footer-photographers"></footer>
+        <footer class="footer" id="footer-photographers">
+            <footer class="footer">
+                <div class="footer__column">
+                    <span class="footer__like" id="like"></span>
+                    <i class="fas fa-heart footer__icon__heart"></i>
+                </div>
+                <div class="footer__column">
+                    <span class="footer__price" id="price"></span>
+                </div>
+            </footer>
+        </footer>
         
         <script type="module" src="../public/js/index.js"></script>
     </body>

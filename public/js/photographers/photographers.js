@@ -1,41 +1,45 @@
-import Banner from "./banner/banner.js";
-import Gallery from "./gallery/gallery.js";
-import Footer from "./footer/footer.js"
-import Utils from "../utils/utils.js";
-import Contact from "./contact/contact.js";
+import { banner } from "./banner/banner.js";
+import { contact } from "./contact/contact.js";
+import { galleryFactory } from "../factories/gallery/gallery-factory.js";
+import { footer } from "./footer/footer.js";
+import { apiFishEye } from "../server/services/client.js";
 
-export default class PhotographerProfil {
-    displayBanner(data) {
-        let sectionBannerPhotographer = document.getElementById('section-banner-photographer');
-        let id = window.location.search.split('id=')[1];     
-        let photographers = !id ? data : data.filter(photographer => photographer.id == id);
-        let urlImage = photographers[0].portrait.split('.');
+export const photographerProfil  = () => {
+    const render = () => {
+        apiFishEye('../public/json/api.json').then((data) => {
+            let dataPhotographers = data.photographers;
+            let dataMedias = data.media;
+            
+            apiFishEye('../public/json/errorMessages.json').then((dataErrors) => {
+                const renderBanner = () => {
+                    return banner(dataPhotographers);
+                }
 
-        sectionBannerPhotographer.innerHTML = new Banner().templateBanner(
-            photographers[0].name, 
-            photographers[0].city, 
-            photographers[0].country, 
-            photographers[0].tagline, 
-            photographers[0].tags, 
-            urlImage[0]
-        );
+                const renderMedias = () => {
+                    return galleryFactory(dataMedias, dataPhotographers);
+                }
+            
+                const renderContact = () => {
+                    return contact(dataErrors, dataPhotographers);
+                }
+            
+                const renderFooter = () => {
+                    return footer(dataPhotographers, dataMedias);
+                }
+
+                return (
+                    renderBanner(), 
+                    renderMedias(),
+                    renderContact(),
+                    renderFooter()
+                )
+            }).catch(() => {
+                console.error('Failed to load ApiFishEye');
+            })
+        }).catch(() => {
+            console.error('Failed to load ApiFishEye');
+        })
     }
 
-    displayMedias(dataMedias, dataPhotographers) {
-        new Gallery().galleryMedias(dataMedias, dataPhotographers);
-        new Gallery().displaySlider();
-    }
-
-    displayContact(dataErrors, dataPhotographers) {
-        new Contact().formContact(dataErrors, dataPhotographers);
-    }
-
-    displayFooter(dataPhotographers, dataMedias) {
-        let footer = document.getElementById('footer-photographers');
-        let id = window.location.search.split('id=')[1];     
-        let photographers = !id ? dataPhotographers : dataPhotographers.filter(photographer => photographer.id == id);
-        let medias = !id ? dataMedias : dataMedias.filter(media => media.photographerId == id);
-        let totalLikes = new Utils().getTotalLikes(medias.map(({ likes }) => likes));
-        footer.innerHTML = new Footer().templateFooter(totalLikes, photographers[0].price)
-    }
+    return render()
 }

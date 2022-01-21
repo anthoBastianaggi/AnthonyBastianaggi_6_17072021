@@ -1,84 +1,82 @@
-import Constants from '../constants/constants.js';
-import RemoveMessages from "../removeMessage/removeMessage.js";
-import Validate from "../validate/validate.js";
+import { firstname, lastname, email, message, openModal, sectionModal, closeModal, btnSubmit, alertSuccess, regex, modal } from '../constants/constants.js';
+import { removeInvalidMessageName, removeInvalidMessageEmail, removeInvalidMessageTextarea } from "../removeMessage/removeMessage.js";
+import { validateName, validateEmail, validateMessage, validate } from "../validate/validate.js";
 
-export default class Modal {
-    eventBlurModal(data) {
-        new Constants().constantsElements().firstname.addEventListener("blur", function() {
-            new Validate().validateName(new Constants().constantsElements().firstname, 'first-error', 'red', new Constants().constantsElements().regex.regexName, data.firstNameValueMissing, 
-            data.firstNameValueRegex, data.firstNameValueMinLength, data.firstNameValueMaxLength)
-        }, true);
+export const eventBlurModal = (data) => {
+    firstname.addEventListener("blur", function() {
+        validateName(firstname, 'first-error', 'red', regex.regexName, data.firstNameValueMissing, 
+        data.firstNameValueRegex, data.firstNameValueMinLength, data.firstNameValueMaxLength)
+    }, true);
 
-        new Constants().constantsElements().lastname.addEventListener("blur", function() { 
-            new Validate().validateName(new Constants().constantsElements().lastname, 'last-error', 'red', new Constants().constantsElements().regex.regexName, data.lastNameValueMissing, 
-            data.lastNameValueRegex, data.lastNameValueMinLength, data.lastNameValueMaxLength)
-        }, true);
+    lastname.addEventListener("blur", function() { 
+        validateName(lastname, 'last-error', 'red', regex.regexName, data.lastNameValueMissing, 
+        data.lastNameValueRegex, data.lastNameValueMinLength, data.lastNameValueMaxLength)
+    }, true);
 
-        new Constants().constantsElements().email.addEventListener("blur", function() {
-            new Validate().validateEmail(new Constants().constantsElements().email, 'email-error', 'red', data.emailValueMissing, data.emailValueRegex)
-        }, true);
+    email.addEventListener("blur", function() {
+        validateEmail(email, 'email-error', 'red', data.emailValueMissing, data.emailValueRegex)
+    }, true);
 
-        new Constants().constantsElements().message.addEventListener("blur", function() { 
-            new Validate().validateMessage(new Constants().constantsElements().message, 'message-error', 'red', new Constants().constantsElements().regex.regexMessage, data.messageValueMissing, 
-            data.messageValueRegex, data.messageValueMinLength, data.messageValueMaxLength)
-        }, true);
+    message.addEventListener("blur", function() { 
+        validateMessage(message, 'message-error', 'red', regex.regexMessage, data.messageValueMissing, 
+        data.messageValueRegex, data.messageValueMinLength, data.messageValueMaxLength)
+    }, true);
+}
+
+export const eventFocusModal = () => {
+    firstname.addEventListener("focusout", function() {
+        removeInvalidMessageName(firstname, regex.regexName, 'first-error')
+    }, true);
+    
+    lastname.addEventListener("focusout", function() {
+        removeInvalidMessageName(lastname, regex.regexName, 'last-error')
+    }, true);
+
+    email.addEventListener("focusout", function () {
+        removeInvalidMessageEmail(email, 'email-error');
+    }, true)
+
+    message.addEventListener("focusout", function() {
+        removeInvalidMessageTextarea(message, regex.regexMessage, 'message-error')
+    }, true);
+}
+
+export const eventOnClickModal = (data) => {
+    openModal.onclick = function() {
+        sectionModal.style.display = 'flex';
     }
 
-    eventFocusModal() {
-        new Constants().constantsElements().firstname.addEventListener("focusout", function() {
-            new RemoveMessages().removeInvalidMessageName(new Constants().constantsElements().firstname, new Constants().constantsElements().regex.regexName, 'first-error')
-        }, true);
-       
-        new Constants().constantsElements().lastname.addEventListener("focusout", function() {
-            new RemoveMessages().removeInvalidMessageName(new Constants().constantsElements().lastname, new Constants().constantsElements().regex.regexName, 'last-error')
-        }, true);
-
-        new Constants().constantsElements().email.addEventListener("focusout", function () {
-            new RemoveMessages().removeInvalidMessageEmail(new Constants().constantsElements().email, 'email-error');
-        }, true)
-
-        new Constants().constantsElements().message.addEventListener("focusout", function() {
-            new RemoveMessages().removeInvalidMessageTextarea(new Constants().constantsElements().message, new Constants().constantsElements().regex.regexMessage, 'message-error')
-        }, true);
+    closeModal.onclick = function() {
+        sectionModal.style.display = 'none';
     }
 
-    eventOnClickModal(data) {
-        new Constants().constantsElements().openModal.onclick = function() {
-            new Constants().constantsElements().sectionModal.style.display = 'flex';
-        }
-
-        new Constants().constantsElements().closeModal.onclick = function() {
-            new Constants().constantsElements().sectionModal.style.display = 'none';
-        }
-
-        new Constants().constantsElements().btnSubmit.onclick = function() {
-            if(new Validate().validate(data)) {
-                console.log({
-                    firstValue : new Constants().constantsElements().firstname.value,
-                    lastValue: new Constants().constantsElements().lastname.value,
-                    emailValue: new Constants().constantsElements().email.value,
-                    messageValue: new Constants().constantsElements().message.value
-                })
-                
-                new Constants().constantsElements().sectionModal.style.display = "none";
-                new Constants().constantsElements().alertSuccess.style.display = 'block';
-                setTimeout(() => {
-                    const message = new Constants().constantsElements().alertSuccess;
+    btnSubmit.onclick = function() {
+        if(validate(data)) {
+            console.log({
+                firstname : firstname.value,
+                lastname: lastname.value,
+                email: email.value,
+                message: message.value
+            })
             
-                    // Change the message opacity
-                    message.style.opacity = '0';
-                    // Remove the message
-                    setTimeout(() => {
-                        document.querySelector('.alert__success').parentElement.removeChild(message)
-                    }, 2000);
-                }, 5000);
-            }
-        };
+            sectionModal.style.display = "none";
+            alertSuccess.style.display = 'block';
+            setTimeout(() => {
+                const message = alertSuccess;
+        
+                // Change the message opacity
+                message.style.opacity = '0';
+                // Remove the message
+                setTimeout(() => {
+                    document.querySelector('.alert__success').parentElement.removeChild(message)
+                }, 2000);
+            }, 5000);
+        }
+    };
 
-        window.onclick = function(event) {
-            if (event.target == new Constants().constantsElements().modal) {
-                new Constants().constantsElements().sectionModal.style.display = "none";
-            }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            sectionModal.style.display = "none";
         }
     }
 }

@@ -1,43 +1,33 @@
-import Constants from '../photographers/contact/constants/constants.js';
+import { regex } from '../photographers/contact/constants/constants.js';
 
-export default class Utils {
-    createElement(section, article, className, id, template) {
-        article = document.createElement('article');
-        section.appendChild(article);
-        article.className = className;
-        article.id = `${id}`;
-        article.innerHTML = template;
+export const getTotalLikes = (data) =>{
+    let total = 0;
+    for(let i in data) { 
+        total += data[i];
     }
+    return total;
+}
 
-    getTotalLikes(data){
-        let total = 0;
-        for(let i in data) { 
-            total += data[i];
-        }
-        return total;
-    }
+export const isString = (val) => {
+    return typeof val === 'string' || ((!!val && typeof val === 'object') && Object.prototype.toString.call(val) === '[object String]');
+}
 
-    isString(val) {
-        return typeof val === 'string' || ((!!val && typeof val === 'object') && Object.prototype.toString.call(val) === '[object String]');
-    }
+export const isEmail = (email) => {
+    if(isString(email)) return regex.regexEmail.test(email.toLowerCase());
+}
 
-    isEmail(email) {
-        if(this.isString(email)) return new Constants().constantsElements().regex.regexEmail.test(email.toLowerCase());
-    }
+export const producePrompt = (message, id, color) => {
+    document.getElementById(id).innerHTML = message;
+    document.getElementById(id).style.color = color;
+    document.getElementById(id).style.display = "block";
+}
 
-    producePrompt(message, id, color) {
-        document.getElementById(id).innerHTML = message;
-        document.getElementById(id).style.color = color;
-        document.getElementById(id).style.display = "block";
-    }
+export const invalidMessage = (element, message, errorClassName, color) => {
+    element.classList.add('invalid');
+    producePrompt(message, errorClassName , color)
+}
 
-    invalidMessage(element, message, errorClassName, color) {
-        element.classList.add('invalid');
-        this.producePrompt(message, errorClassName , color)
-    }
-
-    removeInvalidMessage(element, message, errorClassName, color) {
-        element.classList.remove('invalid');
-        this.producePrompt(message, errorClassName, color)
-    }
+export const removeInvalidMessage = (element, message, errorClassName, color) => {
+    element.classList.remove('invalid');
+    producePrompt(message, errorClassName, color)
 }
